@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="gs://helpme-b7e48.appspot.com/images/logo.png" />
         <p>
           Welcome to HelpMe.com!!!
         </p>
