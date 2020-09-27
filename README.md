@@ -15,15 +15,5 @@ A web app to connect the people in need, especially those affected by the natura
 
 ## Getting Started
 
-## Github
-1. git clone git clone https://github.com/sushantcode/Adiuva.git
-2.cd HelpMeDotCom/helpme
-3. git branch name [name can be anything, relate to the feature/page]
-4. git switch name
-5.git branch [ view all your created branches]
-6. git branch --show-current [view current branch you are working on]
-7. git branch -d [to delete branch]
-8. git add name
-9. git commit-m "My code" 
-10.git push  
+
 
