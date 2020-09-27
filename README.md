@@ -25,5 +25,5 @@ A web app to connect the people in need, especially those affected by the natura
 7. git branch -d [to delete branch]
 8. git add name
 9. git commit-m "My code"
-10.git push 
+10.git push  
 
