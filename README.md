@@ -24,6 +24,6 @@ A web app to connect the people in need, especially those affected by the natura
 6. git branch --show-current [view current branch you are working on]
 7. git branch -d [to delete branch]
 8. git add name
-9. git commit-m "My code"
+9. git commit-m "My code" 
 10.git push  
 
