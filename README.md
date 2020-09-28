@@ -14,3 +14,6 @@ A web app to connect the people in need, especially those affected by the natura
 
 
 ## Getting Started
+
+
+
