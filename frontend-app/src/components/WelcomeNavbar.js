@@ -42,7 +42,7 @@ function Navbar() {
                 className="nav-links"
                 onClick={closeMobileViewMenu}
               >
-                Log-In
+                Log In
               </Link>
             </li>
             <li className="welcomeNav-item">
@@ -51,7 +51,7 @@ function Navbar() {
                 className="nav-links"
                 onClick={closeMobileViewMenu}
               >
-                Contact-us
+                Contact Us
               </Link>
             </li>
             <li className="welcomeNav-tem">
@@ -60,7 +60,7 @@ function Navbar() {
                 className="nav-links"
                 onClick={closeMobileViewMenu}
               >
-                Survey-Feedbacks
+                Survey
               </Link>
             </li>
 

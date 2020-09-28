@@ -9,7 +9,6 @@ function Contact() {
           <h1>Login</h1>
             <form className=" form-cardbox">
             <div className="form-input">
-            Username:
               <label htmlFor="email" classNAme="form-label">
                 <input
                   id="email"
