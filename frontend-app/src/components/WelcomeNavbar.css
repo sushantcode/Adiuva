@@ -19,20 +19,20 @@
     justify-content: center;
     align-items: center;
     height: 80px;
-    max-width: 1500px;
+    max-width: inherit;
 }
 
 .navbar-logo {
     justify-self: start;
-    margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
     display: flex;
-    height: 80px;
+    align-items: center;
 }
 
 .logoIcon {
+    display: flex;
     height: 80px;
 }
 

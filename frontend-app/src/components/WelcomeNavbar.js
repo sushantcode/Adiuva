@@ -30,11 +30,11 @@ function Navbar() {
             <nav className="welcomeNavbar">
                 <div className="welcomeNavbar-container">
                     <Link
-                        to="/"
+                        to="#"
                         className="navbar-logo"
                         onClick={closeMobileViewMenu}
                     >
-                        <img src={Logo} alt="LOGO" id="logoIcon" />
+                        <img src={Logo} alt="LOGO" />
                     </Link>
                     <div className="menu-icon" onClick={handleClick}>
                         <i className={click ? "fas fa-times" : "fas fa-bars"} />
