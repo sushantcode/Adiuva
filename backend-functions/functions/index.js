@@ -18,6 +18,7 @@ app.get("/dPosts", (request, response) => {
                     userName: doc.data().userName,
                     postType: doc.data().postType,
                     body: doc.data().body,
+                    zipcode: doc.data().zipcode,
                     createdAt: doc.data().createdAt,
                 });
             });
@@ -31,6 +32,7 @@ app.post("/dPosts", (request, response) => {
         userName: request.body.userName,
         postType: request.body.postType,
         body: request.body.body,
+        zipcode: request.body.zipcode,
         createdAt: admin.firestore.Timestamp.fromDate(new Date()),
     };
 
