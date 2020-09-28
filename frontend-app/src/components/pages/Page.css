@@ -1,0 +1,98 @@
+.contact-card {
+  text-align: center;
+}
+
+.content-box {
+  background-image: url("./1pic.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  margin-top: 25px;
+  margin-right: 60px;
+  width: 450px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px #555;
+  background-color: paleturquoise;
+  align-items: center;
+}
+
+.content-mild {
+  width: 340px;
+  height: 450px;
+  margin-top: 20px;
+  display: flex;
+  background-color: lightpink;
+}
+
+.form-input {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 280px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  height: 50px;
+}
+.form-inp {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 280px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  height: 50px;
+}
+
+.form-in {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 280px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  height: 180px;
+
+  outline: none;
+}
+
+.form-btn {
+  border-radius: 30px;
+  font-size: 25px;
+  margin-top: 50px;
+  height: 40px;
+  width: 120px;
+  margin-left: 30px;
+  background-color: paleturquoise;
+}
+
+.form-btn:hover {
+  background-color: salmon;
+  color: #242424;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .content .content-mild {
+    margin-top: 15px;
+    margin-right: 30px;
+    width: 2500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px #555;
+    background-color: paleturquoise;
+    align-items: center;
+  }
+}

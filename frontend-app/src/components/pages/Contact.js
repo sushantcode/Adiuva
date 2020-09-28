@@ -5,47 +5,51 @@ function Contact() {
   return (
     <div className="contact-card">
       <div className="content-box">
-        <div className="content-subbox">
+        <div className=" content">
           <h1> Contact</h1>
           <p>We'd ❤️ to hear from you</p>
-          <form className=" form-cardbox">
-            <div className="form-input">
-              <label htmlFor="username" classNAme="form-label">
-                <input
-                  id="username"
-                  type="text"
-                  name="username"
-                  className="form-input"
-                  placeholder="Full name"
-                />
-              </label>
-            </div>
-            <div className="form-input">
-              <label htmlFor="email" classNAme="form-label">
-                <input
-                  id="email"
-                  type="text"
-                  name="email"
-                  className="form-input"
-                  placeholder="Email"
-                />
-              </label>
-            </div>
-            <div className="form-in">
-              <label htmlFor="message" classNAme="form-label">
-                <input
-                  id="message"
-                  type="text"
-                  name="message"
-                  className="form-input"
-                  placeholder="Message"
-                />
-              </label>
-            </div>
-            <button className="form-btn" type="submit">
-              Submit
-            </button>
-          </form>
+          <div className="content-mild">
+            <form className=" form-cardbox">
+              <div className="form-input">
+                <label htmlFor="username" classNAme="form-label">
+                  <input
+                    id="username"
+                    type="text"
+                    name="username"
+                    className="form-input"
+                    placeholder="Full name"
+                  />
+                </label>
+              </div>
+              <div className="form-inp">
+                <label htmlFor="email" className="form-label">
+                  <input
+                    id="email"
+                    type="text"
+                    name="email"
+                    className="form-inp"
+                    placeholder="Email"
+                  />
+                </label>
+              </div>
+              <div className="message">
+                <div className="form-in">
+                  <label htmlFor="message" className="form-label">
+                    <input
+                      id="message"
+                      type="text"
+                      name="message"
+                      className="form-in"
+                      placeholder="Message"
+                    />
+                  </label>
+                </div>
+              </div>
+              <button className="form-btn" type="submit">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
