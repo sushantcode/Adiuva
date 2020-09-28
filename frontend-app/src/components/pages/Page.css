@@ -69,8 +69,18 @@
   border-radius: 30px;
   font-size: 25px;
   margin-top: 50px;
-  height: 40px;
-  width: 120px;
+  height: 100px;
+  width: 200px;
+  margin-left: 30px;
+  background-color: paleturquoise;
+}
+
+.form-btn1 {
+  border-radius: 30px;
+  font-size: 25px;
+  margin-top: 50px;
+  height: 100px;
+  width: 200px;
   margin-left: 30px;
   background-color: paleturquoise;
 }
