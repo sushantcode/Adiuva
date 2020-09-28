@@ -11,7 +11,7 @@ function Contact() {
           <div className="content-mild">
             <form className=" form-cardbox">
               <div className="form-input">
-                <label htmlFor="username" classNAme="form-label">
+                <label htmlFor="username" className="form-label">
                   <input
                     id="username"
                     type="text"
