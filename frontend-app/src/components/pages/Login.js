@@ -1,46 +1,54 @@
 import React from "react";
 import "./Page.css";
 
-function Contact() {
+function Login() {
   return (
     <div className="contact-card">
       <div className="content-box">
-        <div className="content-subbox">
-          <h1>Login</h1>
+        <div className="content">
+          <h1> Please Log In </h1>
+          <div className="content-mild">
             <form className=" form-cardbox">
-            <div className="form-input">
-              <label htmlFor="email" classNAme="form-label">
-                <input
-                  id="email"
-                  type="text"
-                  name="email"
-                  className="form-input"
-                  placeholder="Email"
-                />
-              </label>
-            </div>
-            <div className="form-in">
-              <label htmlFor="password" classNAme="form-label">
-                <input
-                  id="password"
-                  type="text"
-                  name="message"
-                  className="form-input"
-                  placeholder="Enter your password"
-                />
-              </label>
-            </div>
-            <button className="form-btn" type="submit">
-              Submit
-            </button>
-            <button className="form-btn1" type="submit">
-              Forgot your password
-            </button>
-          </form>
+              <div className="form-input">
+                <label htmlFor="username" className="form-label">
+                  <input
+                    id="username"
+                    type="text"
+                    name="username"
+                    className="form-input"
+                    placeholder="User name"
+                  />
+                </label>
+              </div>
+              <div className="form-inp">
+                <label htmlFor="email" className="form-label">
+                  <input
+                    id="email"
+                    type="text"
+                    name="email"
+                    className="form-inp"
+                    placeholder="Password"
+                  />
+                </label>
+              </div>
+
+              <div className=" forgot-link">
+                <h4>
+                  <u>Forgot your password</u>
+                </h4>
+                <br></br>
+                <h3> Create a new account</h3>
+              </div>
+
+              <button className="form-btn" type="submit">
+                Login
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default Contact;
+export default Login;

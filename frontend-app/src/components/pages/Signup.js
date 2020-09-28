@@ -1,7 +1,7 @@
 import React from "react";
 import "./Page.css";
 
-function Contact() {
+function Signup() {
   return (
     <div className="contact-card">
       <div className="content-box">
@@ -110,27 +110,27 @@ function Contact() {
                 </label>
               </div>
               <div className="form-in">
-              <label htmlFor="password" classNAme="form-label">
-                <input
-                  id="password"
-                  type="text"
-                  name="message"
-                  className="form-input"
-                  placeholder="Password"
-                />
-              </label>
-            </div>
-            <div className="form-in">
-              <label htmlFor="repassword" classNAme="form-label">
-                <input
-                  id="repassword"
-                  type="text"
-                  name="password"
-                  className="form-input"
-                  placeholder="Re-enter password"
-                />
-              </label>
-            </div>
+                <label htmlFor="password" classNAme="form-label">
+                  <input
+                    id="password"
+                    type="text"
+                    name="message"
+                    className="form-input"
+                    placeholder="Password"
+                  />
+                </label>
+              </div>
+              <div className="form-in">
+                <label htmlFor="repassword" classNAme="form-label">
+                  <input
+                    id="repassword"
+                    type="text"
+                    name="password"
+                    className="form-input"
+                    placeholder="Re-enter password"
+                  />
+                </label>
+              </div>
               <div className="message">
                 <div className="form-in">
                   <label htmlFor="message" className="form-label">
@@ -155,4 +155,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Signup;
