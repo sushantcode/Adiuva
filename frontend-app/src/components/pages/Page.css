@@ -108,7 +108,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .content > h1 {
+  .content>h1 {
     text-align: center;
     font-size: 2em;
   }
@@ -236,10 +236,10 @@
     background-image: url("./2pic.jpg");
   }
   40% {
-    background-image: url("./9pic.jpg");
+    background-image: url("./yy.jpg");
   }
   60% {
-    background-image: url("./8pic.jpg");
+    background-image: url("./xx.jpg");
   }
   80% {
     background-image: url("./8.jpg");
