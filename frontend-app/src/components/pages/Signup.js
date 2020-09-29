@@ -11,24 +11,13 @@ function Signup() {
           <div className="content-mild">
             <form className=" form-cardbox">
               <div className="form-input">
-                <label htmlFor="username" className="form-label">
-                  <input
-                    id="username"
-                    type="text"
-                    name="username"
-                    className="form-input"
-                    placeholder="Full name"
-                  />
-                </label>
-              </div>
-              <div className="form-input">
                 <label htmlFor="firstname" className="form-label">
                   <input
                     id="firstname"
                     type="text"
                     name="firstname"
                     className="form-input"
-                    placeholder="First name"
+                    placeholder="First name*"
                   />
                 </label>
               </div>
@@ -50,7 +39,7 @@ function Signup() {
                     type="text"
                     name="lastname"
                     className="form-input"
-                    placeholder="Last name"
+                    placeholder="Last name*"
                   />
                 </label>
               </div>
@@ -72,7 +61,7 @@ function Signup() {
                     type="text"
                     name="state"
                     className="form-input"
-                    placeholder="State"
+                    placeholder="State*"
                   />
                 </label>
               </div>
@@ -83,7 +72,7 @@ function Signup() {
                     type="text"
                     name="username"
                     className="form-input"
-                    placeholder="Country"
+                    placeholder="Country*"
                   />
                 </label>
               </div>
@@ -94,55 +83,53 @@ function Signup() {
                     type="text"
                     name="username"
                     className="form-input"
-                    placeholder="Zipcode"
+                    placeholder="Zipcode*"
                   />
                 </label>
               </div>
-              <div className="form-inp">
+              <div className="form-input">
+                <label htmlFor="username" className="form-label">
+                  <input
+                    id="username"
+                    type="text"
+                    name="username"
+                    className="form-input"
+                    placeholder="username*"
+                  />
+                </label>
+              </div>
+              <div className="form-input">
                 <label htmlFor="email" className="form-label">
                   <input
                     id="email"
                     type="text"
                     name="email"
-                    className="form-inp"
-                    placeholder="Email"
+                    className="form-input"
+                    placeholder="Email*"
                   />
                 </label>
               </div>
-              <div className="form-in">
+              <div className="form-input">
                 <label htmlFor="password" classNAme="form-label">
                   <input
                     id="password"
-                    type="text"
-                    name="message"
+                    type="password"
+                    name="password"
                     className="form-input"
-                    placeholder="Password"
+                    placeholder="Password*"
                   />
                 </label>
               </div>
-              <div className="form-in">
+              <div className="form-input">
                 <label htmlFor="repassword" classNAme="form-label">
                   <input
                     id="repassword"
-                    type="text"
-                    name="password"
+                    type="password"
+                    name="confirmpassword"
                     className="form-input"
-                    placeholder="Re-enter password"
+                    placeholder="Re-enter password*"
                   />
                 </label>
-              </div>
-              <div className="message">
-                <div className="form-in">
-                  <label htmlFor="message" className="form-label">
-                    <input
-                      id="message"
-                      type="text"
-                      name="message"
-                      className="form-in"
-                      placeholder="Message"
-                    />
-                  </label>
-                </div>
               </div>
               <button className="form-btn" type="submit">
                 Submit
