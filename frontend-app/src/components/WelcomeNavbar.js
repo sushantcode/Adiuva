@@ -8,9 +8,11 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
+  // for a mobile view of any size
   const handleClick = () => setClick(!click);
   const closeMobileViewMenu = () => setClick(false);
 
+  // the size of button is adjusted for screen width less than 960
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -32,6 +34,8 @@ function Navbar() {
           <Link to="/" className="navbar-logo" onClick={closeMobileViewMenu}>
             <img src={Logo} alt="LOGO" style={{ aspectRatio: 3 / 2 }} />
           </Link>
+
+          {/* Clicking on menu-icon displays menu */}
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
