@@ -108,7 +108,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .content>h1 {
+  .content > h1 {
     text-align: center;
     font-size: 2em;
   }
@@ -228,7 +228,7 @@
   backface-visibility: hidden;
   animation: alik 10s linear infinite 0s;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  background-image: url("./6pic.jpg");
+  background-image: url("./1pic.jpg");
 }
 
 @keyframes alik {
@@ -236,13 +236,13 @@
     background-image: url("./2pic.jpg");
   }
   40% {
-    background-image: url("./7pic.jpg");
+    background-image: url("./9pic.jpg");
   }
   60% {
     background-image: url("./8pic.jpg");
   }
   80% {
-    background-image: url("./9pic.jpg");
+    background-image: url("./8.jpg");
   }
   100% {
     background-image: url("./10pic.jpg");
