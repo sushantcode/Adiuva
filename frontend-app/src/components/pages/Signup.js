@@ -5,147 +5,116 @@ function Signup() {
   return (
     <div className="contact-card">
       <div className="content-box">
-        <div className="content-subbox">
-          <h1> Sign-up</h1>
-          <p>Please enter the following information:</p>
+        <div className="content">
+          <h1> Please Sign Up </h1>
           <div className="content-mild">
             <form className=" form-cardbox">
-              <div className="form-input">
+              <div className="form-fill1">
                 <label htmlFor="username" className="form-label">
                   <input
                     id="username"
                     type="text"
                     name="username"
-                    className="form-input"
-                    placeholder="Full name"
+                    className="form-fill"
+                    placeholder="Username*"
                   />
                 </label>
               </div>
-              <div className="form-input">
-                <label htmlFor="firstname" className="form-label">
+              <div className="form-fill">
+                <label htmlFor="fullname" className="form-label">
                   <input
-                    id="firstname"
+                    id="fullname"
                     type="text"
-                    name="firstname"
-                    className="form-input"
-                    placeholder="First name"
+                    name="fullname"
+                    className="form-fill"
+                    placeholder="Full name*"
                   />
                 </label>
               </div>
-              <div className="form-input">
-                <label htmlFor="middlename" className="form-label">
-                  <input
-                    id="middlename"
-                    type="text"
-                    name="middlename"
-                    className="form-input"
-                    placeholder="Middle name"
-                  />
-                </label>
-              </div>
-              <div className="form-input">
-                <label htmlFor="lastname" className="form-label">
-                  <input
-                    id="lastname"
-                    type="text"
-                    name="lastname"
-                    className="form-input"
-                    placeholder="Last name"
-                  />
-                </label>
-              </div>
-              <div className="form-input">
-                <label htmlFor="city" className="form-label">
-                  <input
-                    id="city"
-                    type="text"
-                    name="city"
-                    className="form-input"
-                    placeholder="City"
-                  />
-                </label>
-              </div>
-              <div className="form-input">
-                <label htmlFor="state" className="form-label">
-                  <input
-                    id="state"
-                    type="text"
-                    name="state"
-                    className="form-input"
-                    placeholder="State"
-                  />
-                </label>
-              </div>
-              <div className="form-input">
-                <label htmlFor="country" className="form-label">
-                  <input
-                    id="country"
-                    type="text"
-                    name="username"
-                    className="form-input"
-                    placeholder="Country"
-                  />
-                </label>
-              </div>
-              <div className="form-input">
-                <label htmlFor="zipcode" className="form-label">
-                  <input
-                    id="zipcode"
-                    type="text"
-                    name="username"
-                    className="form-input"
-                    placeholder="Zipcode"
-                  />
-                </label>
-              </div>
-              <div className="form-inp">
+              <div className="form-fill">
                 <label htmlFor="email" className="form-label">
                   <input
                     id="email"
                     type="text"
                     name="email"
-                    className="form-inp"
-                    placeholder="Email"
+                    className="form-fill"
+                    placeholder="Email*"
                   />
                 </label>
               </div>
-              <div className="form-in">
-                <label htmlFor="password" classNAme="form-label">
+              <div className="form-fill">
+                <label htmlFor="city" className="form-label">
+                  <input
+                    id="city"
+                    type="text"
+                    name="city"
+                    className="form-fill"
+                    placeholder="City"
+                  />
+                </label>
+              </div>
+
+              <div className="form-fill">
+                <label htmlFor="state" className="form-label">
+                  <input
+                    id="state"
+                    type="text"
+                    name="state"
+                    className="form-fill"
+                    placeholder="State*"
+                  />
+                </label>
+              </div>
+
+              <div className="form-fill">
+                <label htmlFor="zipcode" className="form-label">
+                  <input
+                    id="zipcode"
+                    type="text"
+                    name="zipcode"
+                    className="form-fill"
+                    placeholder="Zipcode*"
+                  />
+                </label>
+              </div>
+
+              <div className="form-fill">
+                <label htmlFor="country" className="form-label">
+                  <input
+                    id="country"
+                    type="text"
+                    name="country"
+                    className="form-fill"
+                    placeholder="Country*"
+                  />
+                </label>
+              </div>
+
+              <div className="form-fill">
+                <label htmlFor="password" className="form-label">
                   <input
                     id="password"
                     type="text"
-                    name="message"
-                    className="form-input"
-                    placeholder="Password"
-                  />
-                </label>
-              </div>
-              <div className="form-in">
-                <label htmlFor="repassword" classNAme="form-label">
-                  <input
-                    id="repassword"
-                    type="text"
                     name="password"
-                    className="form-input"
-                    placeholder="Re-enter password"
+                    className="form-fill"
+                    placeholder="Password*"
                   />
                 </label>
               </div>
-              <div className="message">
-                <div className="form-in">
-                  <label htmlFor="message" className="form-label">
-                    <input
-                      id="message"
-                      type="text"
-                      name="message"
-                      className="form-in"
-                      placeholder="Message"
-                    />
-                  </label>
-                </div>
+              <div className="form-fill">
+                <label htmlFor="password2" className="form-label">
+                  <input
+                    id="password2"
+                    type="text"
+                    name="password2"
+                    className="form-fill"
+                    placeholder="Confirm Password*"
+                  />
+                </label>
               </div>
-              <button className="form-btn" type="submit">
-                Submit
+
+              <button className="form-btnn" type="submit">
+                Sign Up
               </button>
             </form>
           </div>

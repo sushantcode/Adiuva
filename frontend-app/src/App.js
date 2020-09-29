@@ -1,11 +1,11 @@
 import React from "react";
-import WelcomeNavbar from "./components/WelcomeNavbar";
-import Contact from "./components/pages/Contact";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import WelcomeNavbar from "./components/WelcomeNavbar";
 import Login from "./components/pages/Login";
-import Signup from "./components/pages/Signup";
+import Contact from "./components/pages/Contact";
 import Home from "./components/pages/Home";
+import Signup from "./components/pages/Signup";
 
 function App() {
   return (
@@ -17,7 +17,6 @@ function App() {
           <Route path="/contactus" component={Contact} />
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
-          {/* <Route path="/signin" component={Sign} /> */}
         </Switch>
       </Router>
     </>

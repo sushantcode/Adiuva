@@ -21,9 +21,9 @@ function Login() {
                 </label>
               </div>
               <div className="form-inp">
-                <label htmlFor="email" className="form-label">
+                <label htmlFor="password" className="form-label">
                   <input
-                    id="email"
+                    id="password"
                     type="text"
                     name="email"
                     className="form-inp"

@@ -9,7 +9,6 @@ function Home() {
   return (
     <div className="main-container">
       <div className="container">
-        <h1>hhhh</h1>
         {/* <BackgroundSlideShow images={[image1, image2, image3, image4]} /> */}
       </div>
     </div>
