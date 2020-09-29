@@ -1,0 +1,227 @@
+.contact-card {
+  text-align: center;
+}
+
+.content-box {
+  background-image: url("./1pic.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  margin-top: 14px;
+  margin-right: 60px;
+  width: 450px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px #555;
+  background-color: transparent;
+  align-items: center;
+}
+
+.content-mild {
+  width: 340px;
+  height: 450px;
+  margin-top: 20px;
+  display: flex;
+  box-shadow: 0px 10px 50px #555;
+  background-color: transparent;
+}
+
+.content-mild1 {
+  width: 700px;
+  height: 800px;
+  margin-top: 20px;
+  display: flex;
+  background-color: transparent;
+}
+
+.form-input {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 280px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  height: 50px;
+}
+
+.form-inp {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 280px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  height: 50px;
+}
+
+.form-in {
+  margin-top: 20px;
+  margin-left: 10px;
+  width: 280px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  height: 180px;
+  outline: none;
+}
+
+.form-btn {
+  border-radius: 30px;
+  font-size: 25px;
+  margin-top: 40px;
+  height: 60px;
+  width: 150px;
+  margin-left: 30px;
+  background-color: paleturquoise;
+}
+
+.form-btn1 {
+  border-radius: 30px;
+  font-size: 25px;
+  margin-top: 50px;
+  height: 100px;
+  width: 200px;
+  margin-left: 30px;
+  background-color: paleturquoise;
+}
+
+.form-btn:hover {
+  background-color: silver;
+  color: #242424;
+  border-radius: 0;
+}
+.forgot-link {
+  margin-top: 120px;
+  text-align: center;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .content > h1 {
+    text-align: center;
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .contact-card {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .content-box {
+    background-image: url("./1pic.jpg");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .content {
+    margin-top: 25px;
+    margin-right: 15px;
+    width: 300px;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px #555;
+    background-color: transparent;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .content-mild {
+    width: 220px;
+    height: 360px;
+    margin-top: 24px;
+    display: flex;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .form-input {
+    margin-top: 9px;
+    margin-left: 6px;
+    width: 180px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .form-inp {
+    margin-top: 9px;
+    margin-left: 6px;
+    width: 180px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .form-in {
+    margin-top: 9px;
+    margin-left: 6px;
+    width: 180px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    height: 170px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .form-btn {
+    border-radius: 30px;
+    font-size: 25px;
+    margin-top: 30px;
+    height: 40px;
+    width: 130px;
+    margin-left: 30px;
+    background-color: paleturquoise;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .form-btn: hover {
+    background-color: salmon;
+    color: #242424;
+    border-radius: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-image: url("./2pic.jpg");
+}
