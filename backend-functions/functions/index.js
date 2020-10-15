@@ -79,6 +79,11 @@ app.post("/dPosts", (request, response) => {
 //Sign up api route
 app.post('/register', (require, response) => {
     const newUser = {
+        fName: require.body.fName,
+        mName: require.body.mName,
+        lName: require.body.lName,
+        city: require.body.city,
+        stateName: require.body.stateName,
         email: require.body.email,
         password: require.body.password,
         re_password: require.body.password,
@@ -87,19 +92,75 @@ app.post('/register', (require, response) => {
 
     }
 
-    //TODO-validation
+    // Validation of user inputs
+    let errors = {};
+    
+    if (newUser.fName.trim() == '') {
+        errors.fName = 'First Name cannot be blank';
+    }
+
+    if (newUser.lName.trim() == '') {
+        errors.lName = 'Last Name cannot be blank';
+    }
+
+    if (newUser.stateName.trim() == '') {
+        errors.stateName = 'State cannot be blank';
+    }
+
+    if (!(newUser.email.trim() == '')) {
+        const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!(newUser.email.match(emailRegEx))) {
+            errors.email = 'Invalid email';
+        }
+    }
+    else {
+        errors.email = 'Email cannot be blank';
+    }
+
+    if (newUser.password.trim() == '') {
+        errors.password = 'Password cannot be blank';
+    }
+
+    if (newUser.password != newUser.re_password) {
+        errors.re_password = 'Passwords must match';
+    }
+
+    if (newUser.userName.trim() == '') {
+        errors.userName = 'Username cannot be blank';
+    }
+
+    if (Object.keys(errors).length > 0) {
+        return response.status(400).json(errors);
+    }
+
+    let newUserID;
     fire_admin
         .firestore()
-        .doc(`/users/${newUser.userName}`).get()
-            .then(thisUser => {
-                if (!thisUser.exits) {
+        .doc(`/users/${newUser.userName}`)
+        .get()
+            .then((thisUser) => {
+                if (!(thisUser.exists)) {
                     return firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.password)
-                            .then(data => {
+                            .then((data) => {
+                                newUserID = data.user.uid;
                                 return data.user.getIdToken();
-                                //response.status(201).json({message: `user ${data.user.uid} signed up successfully`});
                             })
-                            .then(userToken => {
-                                return response.status(201).json({ token: userToken });
+                            .then((token) => {
+                                const newUserDetails = {
+                                    fName: newUser.fName,
+                                    mName: newUser.mName,
+                                    lName: newUser.lName,
+                                    city: newUser.city,
+                                    stateName: newUser.stateName,
+                                    userName: newUser.userName,
+                                    email: newUser.email,
+                                    userName: newUser.userName,
+                                    zipcode: newUser.zipcode,
+                                    newUserID,
+                                    registeredAt: new Date().toISOString(),
+                                };
+                                fire_admin.firestore().doc(`/users/${newUser.userName}`).set(newUserDetails);
+                                return response.status(201).json({ token });
                             })
                             .catch((err) => {
                                 console.error(err);
@@ -111,8 +172,6 @@ app.post('/register', (require, response) => {
                 }
             })
 
-
-    
 })
 
 exports.api = functions.https.onRequest(app);
