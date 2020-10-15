@@ -172,6 +172,43 @@ app.post('/register', (require, response) => {
                 }
             })
 
-})
+});
+
+// API for login feature route
+
+app.post('/signin', (require, response) => {
+    const user = {
+        //userName: require.body.userName,
+        email: require.body.email,
+        password: require.body.password
+    };
+
+    let signInFormErr = {};
+
+    if (user.email.trim() == '') {
+        signInFormErr.email = 'Email cannot be blank';
+    }
+
+    if (user.password.trim() == '') {
+        signInFormErr.password = 'Password cannot be blank';
+    }
+
+    if (Object.keys(signInFormErr).length > 0) {
+        return response.status(400).json(signInFormErr);
+    }
+
+    firebase.auth().signInWithEmailAndPassword(user.email, user.password)
+        .then((data) => {
+            return data.user.getIdToken();
+        })
+        .then((token) => {
+            return response.status(200).json({ token });
+        })
+        .catch((err) => {
+            console.error(err);
+            return response.status(500).json({error: err.code});
+        });
+
+});
 
 exports.api = functions.https.onRequest(app);
