@@ -34,7 +34,7 @@ function Navbar() {
     <>
       <nav className="welcomeNavbar">
         <div className="welcomeNavbar-container">
-          <Link to="/" className="navbar-logo" onClick={closeMobileViewMenu}>
+          <Link to="/feed" className="navbar-logo" onClick={closeMobileViewMenu}>
             <img src={Logo} alt="LOGO" style={{ aspectRatio: 3 / 2 }} />
           </Link>
 
