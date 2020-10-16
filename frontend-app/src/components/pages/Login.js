@@ -1,4 +1,5 @@
 import React, { useCallback, useContext } from "react";
+import WelcomeNavbar from '../WelcomeNavbar';
 import { Redirect } from 'react-router';
 import app from '../utils/fireApp';
 import { AuthContext } from '../utils/fireAuth';
@@ -29,6 +30,7 @@ const Login = ({ history }) => {
         return <Redirect to="/Feed"/>
     };
         return (
+            <><WelcomeNavbar />
             <div className="contact-card">
             <div className="content-box">
                 <div className="content">
@@ -46,6 +48,7 @@ const Login = ({ history }) => {
                         />
                         </label>
                     </div>
+                    
                     <div className="form-inp">
                         <label htmlFor="password" className="form-label">
                         <input
@@ -74,6 +77,7 @@ const Login = ({ history }) => {
                 </div>
             </div>
             </div>
+            </>
         );
     };
 

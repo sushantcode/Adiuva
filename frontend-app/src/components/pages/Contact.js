@@ -1,8 +1,10 @@
 import React from "react";
+import WelcomeNavbar from '../WelcomeNavbar';
 import "./Page.css";
 
 function Contact() {
   return (
+    <><WelcomeNavbar />
     <div className="contact-card">
       <div className="content-box">
         <div className="content">
@@ -52,7 +54,7 @@ function Contact() {
           </div>
         </div>
       </div>
-    </div>
+    </div></>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import WelcomeNavbar from '../WelcomeNavbar';
 // import BackgroundSlideShow from "react-background";
 // import image1 from "./2pic.jpg";
 // import image2 from "./6pic.jpg";
@@ -7,11 +8,12 @@ import React from "react";
 
 function Home() {
   return (
+    <><WelcomeNavbar />
     <div className="main-container">
       <div className="container">
         {/* <BackgroundSlideShow images={[image1, image2, image3, image4]} /> */}
       </div>
-    </div>
+    </div></>
   );
 }
 

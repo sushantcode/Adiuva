@@ -1,10 +1,12 @@
 import React from "react";
+import WelcomeNavbar from '../WelcomeNavbar';
 
 function ForgotPass() {
   return (
+    <><WelcomeNavbar />
     <div className="contact-card">
-      hghgdhsg
-    </div>
+      FORGOT PASSWORD PAGE
+    </div></>
   );
 }
 
