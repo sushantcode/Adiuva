@@ -79,7 +79,7 @@ const Signup = ({ history }) => {
                         userID: newUserID,
                         registeredAt: new Date().toISOString(),
                     };
-                    //db.collection("users").doc("newUser.userID").add(newUser);
+                    db.doc(`/users/${newUser.userID}`).set(newUser);
                     history.push("/feed");
                 } catch (err) {
                     alert (err);

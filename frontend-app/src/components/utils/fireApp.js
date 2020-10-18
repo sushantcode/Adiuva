@@ -12,6 +12,6 @@ const app = firebase.initializeApp({
     measurementId: "G-EN26NVPQ60"
  });
 
-export const db = firebase.firestore();
- export default app;
+export const db = firebase.firestore(app);
+export default app;
  

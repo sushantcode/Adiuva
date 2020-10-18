@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "./Button";
+import { Button } from "./PostCreateBtn";
 import { Link } from "react-router-dom";
 import Logo from "./adiuva_logo.png";
 import "./WelcomeNavbar.css";

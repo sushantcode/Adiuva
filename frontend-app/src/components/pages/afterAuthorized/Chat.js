@@ -5,7 +5,10 @@ function Chat() {
   return (
     <><Navbar />
     <div className="contact-card">
-      
+    <p>Chat Page</p>
+    <p> Chat with your donor/donee.. 
+        
+    </p>
     </div>
     </>
   );

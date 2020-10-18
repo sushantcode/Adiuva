@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import { AuthProvider } from './components/utils/fireAuth'
 import Login from "./components/pages/Login";
 import Contact from "./components/pages/Contact";
 import Home from "./components/pages/Home";
@@ -14,20 +15,22 @@ import CreatePost from "./components/pages/afterAuthorized/CreatePost";
 
 function App() {
   return (
-    <Router>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/contactus" component={Contact} />
-          <Route path="/login" component={Login} />
-          <Route path="/forgotpassword" component={ForgotPass} />
-          <Route path="/survey" component={Survey} />
-          <Route path="/signup" component={Signup} />
-          <Route path="/feed" component={Feed} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/chat" component={Chat} />
-          <Route path="/createpost" component={CreatePost} />
-        </Switch>
-    </Router>
+      <AuthProvider>
+        <Router>
+            <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/contactus" component={Contact} />
+            <Route path="/login" component={Login} />
+            <Route path="/forgotpassword" component={ForgotPass} />
+            <Route path="/survey" component={Survey} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/feed" component={Feed} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/chat" component={Chat} />
+            <Route path="/createpost" component={CreatePost} />
+            </Switch>
+        </Router>
+      </AuthProvider>
   );
 }
 
