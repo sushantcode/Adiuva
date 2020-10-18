@@ -2,9 +2,12 @@ import React from "react";
 import Navbar from "../../MainNavbar";
 import app from '../../utils/fireApp';
 
-function Profile() {
+function Profile({history}) {
     const logoutHandler = () => {
         app.auth().signOut()
+            .then(() => {
+                history.push('/');
+            })
             .catch(err => {
                 alert(err);
             });
