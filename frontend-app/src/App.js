@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
+import Footer from "./components/Footer";
 import Login from "./components/pages/Login";
 import Contact from "./components/pages/Contact";
 import Home from "./components/pages/Home";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/createpost" component={CreatePost} />
           <Route path="/appointment" component={Appointment} />
         </Switch>
+        <Footer />
     </Router>
   );
 }

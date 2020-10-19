@@ -103,7 +103,7 @@ function Navbar({ history }) {
 
             <li
                 className="nav-links-mobile"
-                onClick={closeMobileViewMenu && onClickLogout} >
+                onClick={closeMobileViewMenu & onClickLogout} >
                 Log-Out
             </li>
           </ul>
