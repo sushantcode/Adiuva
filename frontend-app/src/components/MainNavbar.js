@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "./PostCreateBtn";
+import { Button } from "./LogOutBtn";
 import { Link } from "react-router-dom";
 import Logo from "./adiuva_logo.png";
-import "./WelcomeNavbar.css";
+import app from './utils/fireApp';
+import "./MainNavbar.css";
 
-function Navbar() {
+
+function Navbar({ history }) {
   //Set the state when an element is clicked
   //Reverse the states
   const [click, setClick] = useState(false);
@@ -30,6 +32,16 @@ function Navbar() {
   // Adding event Listener for resizing the button
   window.addEventListener("resize", showButton);
 
+  const onClickLogout = () => {
+    app.auth().signOut()
+        .then(() => {
+            history.push('/');
+        })
+        .catch(err => {
+            alert(err);
+        });
+    };
+
   return (
     <>
       <nav className="welcomeNavbar">
@@ -46,45 +58,56 @@ function Navbar() {
           {/* Set navbar sizes on the basis of screen */}
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             {/* Links to the respected pages both on the browser and mobile view */}
-            <li className="welcomeNav-item">
+            
+            <li className="Nav-item">
+                <input className='searchBar' type='text' placeholder='search for a person...' on={closeMobileViewMenu} />
+            </li>
+
+            <li className="Nav-item">
+              <Link
+                to="/createpost"
+                className="nav-links"
+                onClick={closeMobileViewMenu}
+              >
+                <i class="fa fa-plus" aria-hidden="true" />
+              </Link>
+            </li>
+            
+            <li className="Nav-item">
               <Link
                 to="/profile"
                 className="nav-links"
                 onClick={closeMobileViewMenu}
               >
-                Profile
+                <i class="far fa-address-card"></i>
               </Link>
             </li>
-            <li className="welcomeNav-item">
+            <li className="Nav-item">
               <Link
                 to="/chat"
                 className="nav-links"
                 onClick={closeMobileViewMenu}
               >
-                Chat
+                <i class="far fa-comments"></i>
               </Link>
             </li>
-            <li className="welcomeNav-tem">
+            <li className="Nav-item">
               <Link
                 to="/appointment"
                 className="nav-links"
                 onClick={closeMobileViewMenu}
               >
-                Appointment
+                <i class="far fa-calendar-alt"></i>
               </Link>
             </li>
 
-            <li>
-              <Link
-                to="/createpost"
+            <li
                 className="nav-links-mobile"
-                onClick={closeMobileViewMenu}
-              >
-                Create Post
-              </Link>
+                onClick={closeMobileViewMenu && onClickLogout} >
+                Log-Out
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline"><i class="fa fa-plus" aria-hidden="true" /></Button>}
+          {button && <Button buttonStyle="btn--outline" onClick={ onClickLogout }> Log-Out </Button>}
         </div>
       </nav>
     </>

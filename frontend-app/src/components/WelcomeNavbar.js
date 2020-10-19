@@ -64,7 +64,7 @@ function Navbar() {
                 Contact Us
               </Link>
             </li>
-            <li className="welcomeNav-tem">
+            <li className="welcomeNav-item">
               <Link
                 to="/survey"
                 className="nav-links"

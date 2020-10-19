@@ -231,7 +231,7 @@
   background-image: url("./1pic.jpg");
 }
 
-@keyframes alik {
+/* @keyframes alik {
   20% {
     background-image: url("./2pic.jpg");
   }
@@ -247,7 +247,7 @@
   100% {
     background-image: url("./10pic.jpg");
   }
-}
+} */
 
 @media screen and (max-width: 960px) {
   .main-container {
