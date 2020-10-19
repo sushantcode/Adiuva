@@ -12,6 +12,7 @@
     "react-background-slider": "^2.0.0",
     "react-background-slideshow": "^1.0.4",
     "react-dom": "^16.13.1",
+    "react-icons": "^3.11.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"

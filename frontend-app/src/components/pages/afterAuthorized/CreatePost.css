@@ -29,13 +29,20 @@ h1
     display: inline-flex;
     font-size: x-large;
     padding-bottom: 20px;
+    border-radius: 20px;
     height: 4rem;
+}
+
+.zipCode
+{
+    border-radius: 20px;
 }
 
 .description-input
 {
     height: 200px;
     width: 400px;
+    border-radius: 20px;
 }
 
 

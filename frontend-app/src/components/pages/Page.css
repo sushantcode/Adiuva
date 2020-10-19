@@ -54,6 +54,8 @@
   height: 50px;
 }
 
+.form-cardbox
+
 .form-inp {
   margin-top: 20px;
   margin-left: 10px;
@@ -69,7 +71,7 @@
   margin-left: 10px;
   width: 280px;
   padding: 10px 10px;
-  border-radius: 5px;
+  border-radius: 20px;
   height: 180px;
   outline: none;
 }
@@ -109,6 +111,25 @@
 .forgot-link1 {
    color: rgb(27, 21, 21);
    text-decoration: none;
+}
+
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.rating
+{
+    position: absolute;
+	opacity: 0;
+	width: 0;
+} 
+
+.star{
+    cursor: pointer;
+    transition: color 200ms;
 }
 
 @media screen and (max-width: 960px) {

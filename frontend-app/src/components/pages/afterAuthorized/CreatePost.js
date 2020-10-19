@@ -17,7 +17,7 @@ function CreatePost() {
             </div>
 
             <div className="zipcode">
-                <input type="text" id="zipcode" name="zipCode" placeholder=" Enter zipcode*" />
+                <input type="text" id="zipcode" className="zipCode" placeholder=" Enter zipcode*" />
             </div>
 
             <div className="description-input">
