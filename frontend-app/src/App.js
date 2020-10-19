@@ -9,6 +9,7 @@ import Survey from "./components/pages/Survey";
 import ForgotPass from "./components/pages/ForgotPass";
 import Feed from "./components/pages/afterAuthorized/Feed";
 import Profile from "./components/pages/afterAuthorized/Profile";
+import Appointment from "./components/pages/afterAuthorized/Appointment";
 import Chat from "./components/pages/afterAuthorized/Chat";
 import CreatePost from "./components/pages/afterAuthorized/CreatePost";
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/profile" component={Profile} />
           <Route path="/chat" component={Chat} />
           <Route path="/createpost" component={CreatePost} />
+          <Route path="/appointment" component={Appointment} />
         </Switch>
     </Router>
   );

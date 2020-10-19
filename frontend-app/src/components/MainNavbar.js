@@ -66,25 +66,25 @@ function Navbar() {
             </li>
             <li className="welcomeNav-tem">
               <Link
-                to="/createpost"
+                to="/appointment"
                 className="nav-links"
-                onClick={closeMobileViewMenu}
-              >
-                CreatePost
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="/profile"
-                className="nav-links-mobile"
                 onClick={closeMobileViewMenu}
               >
                 Appointment
               </Link>
             </li>
+
+            <li>
+              <Link
+                to="/createpost"
+                className="nav-links-mobile"
+                onClick={closeMobileViewMenu}
+              >
+                Create Post
+              </Link>
+            </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline">Feed</Button>}
+          {button && <Button buttonStyle="btn--outline"><i class="fa fa-plus" aria-hidden="true" /></Button>}
         </div>
       </nav>
     </>
