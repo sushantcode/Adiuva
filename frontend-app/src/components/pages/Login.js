@@ -1,13 +1,18 @@
-import React, { useCallback, useContext } from "react";
+import React, { useCallback } from "react";
 import WelcomeNavbar from '../WelcomeNavbar';
 import { Redirect } from 'react-router';
 import app from '../utils/fireApp';
-import { AuthContext } from '../utils/fireAuth';
 import "./Page.css";
 import { Link } from "react-router-dom";
 
 
 const Login = ({ history }) => {
+    app.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            return <Redirect push to="/feed"/>;
+        }
+    });
+
     const onSubmitHandler = useCallback(
         async event => {
             event.preventDefault();
@@ -24,11 +29,6 @@ const Login = ({ history }) => {
         [history]
     );
 
-    const currentUser = useContext(AuthContext);
-
-    if (currentUser) {
-        return <Redirect to="/Feed"/>
-    };
         return (
             <><WelcomeNavbar />
             <div className="contact-card">
@@ -61,12 +61,15 @@ const Login = ({ history }) => {
                         </label>
                     </div>
 
-                    <div className=" forgot-link">
+                    <div className="forgot-link">
+                        
                         <h4>
-                        <u><Link to="/forgotpassword">Forgot your password</Link></u>
+                            <Link to="/forgotpassword"><b><p className="forgot-link1">Forgot your password?</p></b></Link>
                         </h4>
                         <br></br>
-                        <h3><Link to="/signup">Create a new account</Link></h3>
+                        <h3>
+                            <Link to="/signup"><b><p className="forgot-link1">Create a new account</p></b></Link>
+                        </h3> 
                     </div>
 
                     <button className="form-btn" type="submit">

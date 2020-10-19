@@ -11,8 +11,8 @@ function CreatePost() {
           <h1> Creating New Post </h1>
             <div className="radio1">
                 <form>
-                <input type="radio" id="postRequest" name="postType" value="option1" /> Request
-                <input type="radio" id="postDonate" name="postType" value="option2" /> Donate
+                <input type="radio" id="postRequest" name="postType" value="option1" /> <b>Request</b>
+                <input type="radio" id="postDonate" name="postType" value="option2" /> <b>Donate</b>
                 </form>
             </div>
 

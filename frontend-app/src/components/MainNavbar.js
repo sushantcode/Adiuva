@@ -6,7 +6,7 @@ import app from './utils/fireApp';
 import "./MainNavbar.css";
 
 
-function Navbar({ history }) {
+function Navbar() {
   //Set the state when an element is clicked
   //Reverse the states
   const [click, setClick] = useState(false);
@@ -34,9 +34,6 @@ function Navbar({ history }) {
 
   const onClickLogout = () => {
     app.auth().signOut()
-        .then(() => {
-            history.push('/');
-        })
         .catch(err => {
             alert(err);
         });
@@ -101,10 +98,12 @@ function Navbar({ history }) {
               </Link>
             </li>
 
-            <li
+            <li>
+                <Link to="/"
                 className="nav-links-mobile"
                 onClick={closeMobileViewMenu & onClickLogout} >
                 Log-Out
+                </Link>
             </li>
           </ul>
           {button && <Button buttonStyle="btn--outline" onClick={ onClickLogout }> Log-Out </Button>}

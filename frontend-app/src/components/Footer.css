@@ -28,7 +28,16 @@
     padding-bottom: 50px;
 }
 
-img
-{
-    padding-top: 5px;
+.Terms {
+    word-spacing: 3px;
+}
+
+.SocialLogo {
+    word-spacing: 10px;
+    font-size: 1.5rem;
+}
+
+.footerLinks {
+    color: #fff;
+    text-decoration: none;
 }
