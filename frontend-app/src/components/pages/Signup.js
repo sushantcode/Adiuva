@@ -1,13 +1,16 @@
+// Importing firebase app, navbar, and react components
 import React, { useCallback } from "react";
 import WelcomeNavbar from '../WelcomeNavbar';
 import app, { db } from '../utils/fireApp';
 import "./Page.css";
 
-
+// Function to complete signup activity
 const Signup = ({ history }) => {
+    // On click of submit buttom, the callback function if used to validate the input and signup
     const onSubmitHandler = useCallback(
         async event => {
             event.preventDefault();
+            // User object creation
             const {
                 fName,
                 mName,
@@ -21,9 +24,11 @@ const Signup = ({ history }) => {
             } = event.target.elements;
             
             let errors = '';
-
+            // regular expression for emails
             const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    
+            
+            // Validating all the use inputs and storeing respective error
+
             if (fName.value.trim() === '') {
                 errors = 'First Name cannot be blank';
             }
@@ -62,6 +67,7 @@ const Signup = ({ history }) => {
             else {
                 try {
                     let newUserID;
+                    // Creating user using firebase auth() method with email and password
                     await app
                         .auth()
                         .createUserWithEmailAndPassword(email.value, password.value)
@@ -79,6 +85,7 @@ const Signup = ({ history }) => {
                         userID: newUserID,
                         registeredAt: new Date().toISOString(),
                     };
+                    // Pushing the user information once user is signed up successfully to database
                     db.doc(`/users/${newUser.userID}`).set(newUser);
                     history.push("/feed");
                 } catch (err) {

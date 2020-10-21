@@ -1,3 +1,4 @@
+// importing all required functions and packages.
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
@@ -16,6 +17,7 @@ import Appointment from "./components/pages/afterAuthorized/Appointment";
 import Chat from "./components/pages/afterAuthorized/Chat";
 import CreatePost from "./components/pages/afterAuthorized/CreatePost";
 
+// Using router and switch to route the pages from one to another
 function App() {
   return (
     <Router>

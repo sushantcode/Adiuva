@@ -1,3 +1,4 @@
+// Import all the required packages
 import React, { useCallback } from "react";
 import WelcomeNavbar from '../WelcomeNavbar';
 import { Redirect } from 'react-router';
@@ -5,18 +6,22 @@ import app from '../utils/fireApp';
 import "./Page.css";
 import { Link } from "react-router-dom";
 
-
+// Function to process login backend and frontend
 const Login = ({ history }) => {
+    // Check if the user is already logged in
     app.auth().onAuthStateChanged(function(user) {
         if (user) {
+            // Redirecting the user already logged in
             return <Redirect push to="/feed"/>;
         }
     });
 
+    // Callback function to log in the user using email and password provided
     const onSubmitHandler = useCallback(
         async event => {
             event.preventDefault();
             const { email, password } = event.target.elements;
+            // Using firebase auth to login and catching error at same time 
             try {
                 await app
                     .auth()
