@@ -16,9 +16,9 @@ const Footer = () => {
                         | <Link to='/privacy' className='footerLinks'>Privacy </Link>
                     </p>
                     <p className="SocialLogo">
-                    <Link to='www.facebook.com/' className='footerLinks'> <i class="fab fa-facebook" /> </Link> 
-                    <Link to='www.twitter.com/' className='footerLinks'> <i class="fab fa-twitter-square" /> </Link> 
-                    <Link to='https://www.instagram.com/' className='footerLinks'> <i class="fab fa-instagram-square" /> </Link>
+                    <a href='https://www.facebook.com/' className='footerLinks'> <i class="fab fa-facebook" /> </a> 
+                    <a href='https://www.twitter.com/' className='footerLinks'> <i class="fab fa-twitter-square" /> </a> 
+                    <a href='https://www.instagram.com/' className='footerLinks'> <i class="fab fa-instagram-square" /> </a>
                     </p>
                 </div>
                 </div>

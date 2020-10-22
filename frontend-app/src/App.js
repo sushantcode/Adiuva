@@ -14,7 +14,7 @@ import ForgotPass from "./components/pages/ForgotPass";
 import Feed from "./components/pages/afterAuthorized/Feed";
 import Profile from "./components/pages/afterAuthorized/Profile";
 import Appointment from "./components/pages/afterAuthorized/Appointment";
-import Chat from "./components/pages/afterAuthorized/Chat";
+import Chat from "./components/pages/afterAuthorized/Chat/Chat";
 import CreatePost from "./components/pages/afterAuthorized/CreatePost";
 
 // Using router and switch to route the pages from one to another
