@@ -40,6 +40,7 @@ app.get("/dPosts", (request, response) => {
                     postType: doc.data().postType,
                     body: doc.data().body,
                     zipcode: doc.data().zipcode,
+                    imgURL: doc.data().imgURL,
                     createdAt: doc.data().createdAt,
                 });
             });
@@ -56,7 +57,8 @@ app.post("/dPosts", (request, response) => {
         postType: request.body.postType,
         body: request.body.body,
         zipcode: request.body.zipcode,
-        createdAt: new Date().toISOString(),
+        imgURL: request.body.imgURL,
+        createdAt: fire_admin.firestore.Timestamp.fromDate(new Date()),
     };
 
     //pushing the post components into firebase
