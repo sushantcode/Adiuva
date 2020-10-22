@@ -7,13 +7,8 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import placeholderImg from "../8.jpg";
 
-
-const styles = {
-    card: {
-        display: 'flex'
-    }
-}
 
 class Feed extends Component {
     state = {
@@ -31,23 +26,23 @@ class Feed extends Component {
     render () {
         let recentDposts = this.state.dPosts ? (
         this.state.dPosts.map((dPost) => 
-        <Card>
-                <CardContent>
+            <Card className="card">
+                <CardContent className="content">
                     <Typography gutterBottom variant="h5" component="h2">
                         {dPost.userName}
                     </Typography>
-                    <Typography variant="body2" color="textSecondary">{dPost.createdAt}</Typography>
+                    <Typography variant="body2" color="textSecondary">{new Date(dPost.createdAt._seconds*10000).toLocaleDateString("en-US")}</Typography>
                     <Typography variant="body1">Post-Type: {dPost.postType}</Typography>
                     <Typography variant="body1">Zipcode: {dPost.zipcode}</Typography>
                     <Typography variant="body1">{dPost.body}</Typography>
-                    <CardMedia image={dPost.postImage} title="Post Image" />
+                    <CardMedia component="img" image={dPost.imgURL} title="Post Image" className="img" />
                 </CardContent>
-        </Card>)
+            </Card>)
         ) : <p> Loading... </p>
         return (
             <><Navbar />
-            <Grid container justify='center' alignItems='center'>
-                <Grid item sm={8} xs={12}>
+            <Grid container justify='center' alignItems='center' alignContent='center'>
+                <Grid item sm={8} xs={12} justify='center' alignItems='center' alignContent='center'>
                     {recentDposts}
                 </Grid>
             </Grid>
