@@ -31,8 +31,8 @@ class Feed extends Component {
                     <Typography gutterBottom variant="h5" component="h2">
                         {dPost.userName}
                     </Typography>
-                    <Typography variant="body2" color="textSecondary">{new Date(dPost.createdAt._seconds*10000).toLocaleDateString("en-US")}</Typography>
-                    <Typography variant="body1">Post-Type: {dPost.postType}</Typography>
+                    <Typography variant="body2" color="textSecondary">{new Date(dPost.createdAt._seconds*1000).toLocaleDateString("en-US")}</Typography>
+                    <Typography variant="body1"><b>Post-Type: {dPost.postType}</b></Typography>
                     <Typography variant="body1">Zipcode: {dPost.zipcode}</Typography>
                     <Typography variant="body1">{dPost.body}</Typography>
                     <CardMedia component="img" image={dPost.imgURL} title="Post Image" className="img" />
