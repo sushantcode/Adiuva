@@ -6,7 +6,7 @@ import app from '../utils/fireApp';
 const Contact = ({ history }) => {
     
     // Check if the user is already logged in
-    if (app.auth().currentUser) {
+    if (app.auth().currentUser && app.auth().currentUser.emailVerified) {
         // Redirecting the user already logged in
         history.push("/feed");
     };
