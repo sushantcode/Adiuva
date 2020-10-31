@@ -1,17 +1,5 @@
 //defining variables for the firebase-function and firebase database authetication components
 const functions = require("firebase-functions");
-<<<<<<< HEAD
-const admin = require("firebase-admin");
-
-//initializing the app with admin access and giving varibale to express function
-admin.initializeApp();
-const express = require("express");
-const app = express();
-
-//function to retrieve posts already posted in firebase firestore database
-app.get("/dPosts", (request, response) => {
-    admin
-=======
 const fire_admin = require("firebase-admin");
 
 // Importing express frameworks element as methods
@@ -39,7 +27,6 @@ firebase.initializeApp(firebaseConfig);
 //function to retrieve posts already posted in firebase firestore database
 app.get("/dPosts", (request, response) => {
     fire_admin
->>>>>>> sushant_signup
         .firestore()
         .collection("dPosts")
         .get()
@@ -53,10 +40,7 @@ app.get("/dPosts", (request, response) => {
                     postType: doc.data().postType,
                     body: doc.data().body,
                     zipcode: doc.data().zipcode,
-<<<<<<< HEAD
-=======
                     imgURL: doc.data().imgURL,
->>>>>>> sushant_signup
                     createdAt: doc.data().createdAt,
                 });
             });
@@ -73,20 +57,12 @@ app.post("/dPosts", (request, response) => {
         postType: request.body.postType,
         body: request.body.body,
         zipcode: request.body.zipcode,
-<<<<<<< HEAD
-        createdAt: admin.firestore.Timestamp.fromDate(new Date()),
-    };
-
-    //pushing the post components into firebase
-    admin
-=======
         imgURL: request.body.imgURL,
         createdAt: fire_admin.firestore.Timestamp.fromDate(new Date()),
     };
 
     //pushing the post components into firebase
     fire_admin
->>>>>>> sushant_signup
         .firestore()
         .collection("dPosts")
         .add(newPost)
@@ -102,8 +78,6 @@ app.post("/dPosts", (request, response) => {
         });
 });
 
-<<<<<<< HEAD
-=======
 //Sign up api route
 app.post('/register', (require, response) => {
     const newUser = {
@@ -239,5 +213,4 @@ app.post('/signin', (require, response) => {
 
 });
 
->>>>>>> sushant_signup
 exports.api = functions.https.onRequest(app);
