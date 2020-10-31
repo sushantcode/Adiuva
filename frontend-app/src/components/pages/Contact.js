@@ -1,8 +1,16 @@
 import React from "react";
 import WelcomeNavbar from '../WelcomeNavbar';
 import "./Page.css";
+import app from '../utils/fireApp';
 
-function Contact() {
+const Contact = ({ history }) => {
+    
+    // Check if the user is already logged in
+    if (app.auth().currentUser) {
+        // Redirecting the user already logged in
+        history.push("/feed");
+    };
+
   return (
     <><WelcomeNavbar />
     <div className="contact-card">

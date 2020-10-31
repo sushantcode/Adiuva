@@ -2,8 +2,15 @@ import React from "react";
 import Navbar from "../../MainNavbar";
 import StarR from "./StarR";
 import "../Page.css";
+import app from '../../utils/fireApp';
 
-function Profile() {
+const Profile = ({ history }) => {
+    // Check if the user is logged in
+    if (!(app.auth().currentUser)) {
+        // Redirecting the user to log-in if logged out
+        history.push("/login");
+    };
+    
     return (
     <><Navbar />
         <div className="contact-card">

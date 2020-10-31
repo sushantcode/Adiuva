@@ -1,9 +1,17 @@
 import React from "react";
 import Navbar from "../../MainNavbar";
 import "./CreatePost.css";
+import app from '../../utils/fireApp';
 
-function CreatePost() {
-  return (
+const CreatePost = ({ history }) => {
+  
+    // Check if the user is logged in
+    if (!(app.auth().currentUser)) {
+        // Redirecting the user to log-in if logged out
+        history.push("/login");
+    };
+
+    return (
     <><Navbar />
     <div className="contact-card">
     <div className="content-box">

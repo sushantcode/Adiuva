@@ -9,12 +9,10 @@ import { Link } from "react-router-dom";
 // Function to process login backend and frontend
 const Login = ({ history }) => {
     // Check if the user is already logged in
-    app.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            // Redirecting the user already logged in
-            return <Redirect push to="/feed"/>;
-        }
-    });
+    if (app.auth().currentUser) {
+        // Redirecting the user already logged in
+        history.push("/feed");
+    };
 
     // Callback function to log in the user using email and password provided
     const onSubmitHandler = useCallback(

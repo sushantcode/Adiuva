@@ -1,11 +1,30 @@
 // Importing firebase app, navbar, and react components
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
 import WelcomeNavbar from '../WelcomeNavbar';
 import app, { db } from '../utils/fireApp';
 import "./Page.css";
 
 // Function to complete signup activity
 const Signup = ({ history }) => {
+    
+    // Check if the user is already logged in
+    if (app.auth().currentUser) {
+        // Redirecting the user already logged in
+        history.push("/feed");
+    };
+    
+    const [open, setOpen] = useState(false);
+
+    const handleClose = () => {
+        setOpen(false);
+        history.push("/login");
+    };
+    
     // On click of submit buttom, the callback function if used to validate the input and signup
     const onSubmitHandler = useCallback(
         async event => {
@@ -73,6 +92,10 @@ const Signup = ({ history }) => {
                         .createUserWithEmailAndPassword(email.value, password.value)
                         .then((data) => {
                             newUserID = data.user.uid;
+                            app.auth().currentUser.sendEmailVerification()
+                            .then(() => {
+                                setOpen(true);
+                            })
                         });
                     const newUser = {
                         fName: fName.value,
@@ -87,12 +110,11 @@ const Signup = ({ history }) => {
                     };
                     // Pushing the user information once user is signed up successfully to database
                     db.doc(`/users/${newUser.userID}`).set(newUser);
-                    history.push("/feed");
                 } catch (err) {
                     alert (err);
                 }
             }
-        }, [history]
+        }
     );
 
     return (
@@ -214,6 +236,23 @@ const Signup = ({ history }) => {
               <button className="form-btnn" type="submit">
                 Sign Up
               </button>
+                <Dialog
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                >
+                    <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Thank you for signing up. Email-verification link has been sent to your email. Please check your email and verify it before signing in.
+                    </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                    <Button onClick={handleClose} color="primary">
+                        Ok
+                    </Button>
+                    </DialogActions>
+                </Dialog>
             </form>
           </div>
         </div>
