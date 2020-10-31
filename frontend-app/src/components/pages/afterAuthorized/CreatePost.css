@@ -1,0 +1,84 @@
+.content
+{
+    height: 600px;
+    width: 600px;
+}
+
+
+h1
+{
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 25px;
+}
+
+.radio1
+{
+    display: inline;
+    font-size: large;
+    padding-right: 30px;
+    padding-bottom: 20px;
+}
+
+#postDonate {
+    margin-left: 20px;
+}
+
+.zipcode
+{
+    display: inline-flex;
+    font-size: x-large;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    height: 4rem;
+}
+
+.zipCode
+{
+    border-radius: 20px;
+}
+
+.description-input
+{
+    height: 200px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+
+button
+{
+    display: inline-block;
+}
+.btnn
+{
+    color: white;
+    border-radius: 15px;
+    font-size: 15px;
+    margin-top: 24px;
+    height: 45px;
+    width: 140px;
+    margin-left: 30px;
+    background-color: blue;
+} 
+.btnn:hover {
+    background-color: silver;
+    color: #242424;
+    border-radius: 0;
+  }
+
+  .form-btnn {
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 24px;
+    height: 45px;
+    width: 160px;
+    margin-left: 30px;
+    background-color: rgb(7, 255, 48);
+  }
+  
+  .form-btnn:hover {
+    background-color: silver;
+    color: #242424;
+    border-radius: 0;
+  }

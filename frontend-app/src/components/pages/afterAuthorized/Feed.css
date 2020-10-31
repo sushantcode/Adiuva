@@ -1,0 +1,17 @@
+.card
+{
+    display: 'flex';
+    margin-bottom: 20;
+    align-content: center;
+    justify-items: center;
+}
+
+.img
+{
+    min-width: 200;
+}
+
+.content
+{
+    padding: 20;
+}

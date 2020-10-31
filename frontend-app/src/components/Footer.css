@@ -1,0 +1,43 @@
+.AppFooter
+{
+    color:white;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+}
+
+.footercontainer
+{
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    align-items: center;
+}
+
+.footrow
+{
+    text-align: center;
+    margin-top: 0;
+}
+
+.row2
+{
+    padding-bottom: 50px;
+}
+
+.Terms {
+    word-spacing: 3px;
+}
+
+.SocialLogo {
+    word-spacing: 10px;
+    font-size: 1.5rem;
+}
+
+.footerLinks {
+    color: #fff;
+    text-decoration: none;
+}

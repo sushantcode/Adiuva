@@ -1,0 +1,56 @@
+import React from "react";
+import Navbar from "../../MainNavbar";
+import "./CreatePost.css";
+import app from '../../utils/fireApp';
+
+const CreatePost = ({ history }) => {
+  
+    // Check if the user is logged in
+    if (!(app.auth().currentUser)) {
+        // Redirecting the user to log-in if logged out
+        history.push("/login");
+    };
+
+    return (
+    <><Navbar />
+    <div className="contact-card">
+    <div className="content-box">
+        <div className="content">
+          <h1> Creating New Post </h1>
+            <div className="radio1">
+                <form>
+                <input type="radio" id="postRequest" name="postType" value="option1" /> <b>Request</b>
+                <input type="radio" id="postDonate" name="postType" value="option2" /> <b>Donate</b>
+                </form>
+            </div>
+
+            <div className="zipcode">
+                <input type="text" id="zipcode" className="zipCode" placeholder=" Enter zipcode*" />
+            </div>
+
+            <div className="description-input">
+              <label htmlFor="description" className="form-label">
+                <input
+                  id="description"
+                  type="description"
+                  name="description"
+                  className="description-input"
+                  placeholder="Please Describe what you are posting........"
+                  />
+              </label>
+            
+            </div>
+              <button className="btnn" type="upload">
+                Up Load Image
+              </button>
+              <button className="form-btnn" type="post">
+                Post
+              </button>
+        </div>
+      </div>
+    </div>
+    </>
+  );
+}
+
+export default CreatePost;

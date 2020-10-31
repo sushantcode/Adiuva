@@ -54,6 +54,8 @@
   height: 50px;
 }
 
+.form-cardbox
+
 .form-inp {
   margin-top: 20px;
   margin-left: 10px;
@@ -69,7 +71,7 @@
   margin-left: 10px;
   width: 280px;
   padding: 10px 10px;
-  border-radius: 5px;
+  border-radius: 20px;
   height: 180px;
   outline: none;
 }
@@ -81,7 +83,7 @@
   height: 60px;
   width: 150px;
   margin-left: 30px;
-  background-color: paleturquoise;
+  background-color: whitesmoke;
 }
 
 .form-btn1 {
@@ -91,23 +93,47 @@
   height: 100px;
   width: 200px;
   margin-left: 30px;
-  background-color: paleturquoise;
+  background-color: whitesmoke;
 }
 
 .form-btn:hover {
   background-color: silver;
   color: #242424;
-  border-radius: 0;
+  border-radius: 10;
 }
+
 .forgot-link {
   margin-top: 120px;
   text-align: center;
   margin-left: 30px;
-  cursor: pointer;
+}
+
+.forgot-link1 {
+   color: rgb(27, 21, 21);
+   text-decoration: none;
+}
+
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.rating
+{
+    position: absolute;
+	opacity: 0;
+	width: 0;
+} 
+
+.star{
+    cursor: pointer;
+    transition: color 200ms;
 }
 
 @media screen and (max-width: 960px) {
-  .content > h1 {
+  .content>h1 {
     text-align: center;
     font-size: 2em;
   }
@@ -202,7 +228,7 @@
     height: 40px;
     width: 130px;
     margin-left: 30px;
-    background-color: paleturquoise;
+    background-color: whitesmoke;
   }
 }
 
@@ -214,14 +240,140 @@
   }
 }
 
+.main-container {
+  text-align: center;
+}
+
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-position: center center;
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
   backface-visibility: hidden;
-  animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation: alik 10s linear infinite 0s;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  background-image: url("./2pic.jpg");
+  background-image: url("./1pic.jpg");
+}
+
+/* @keyframes alik {
+  20% {
+    background-image: url("./2pic.jpg");
+  }
+  40% {
+    background-image: url("./yy.jpg");
+  }
+  60% {
+    background-image: url("./xx.jpg");
+  }
+  80% {
+    background-image: url("./8.jpg");
+  }
+  100% {
+    background-image: url("./10pic.jpg");
+  }
+} */
+
+@media screen and (max-width: 960px) {
+  .main-container {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    backface-visibility: hidden;
+    animation: alik 8s linear infinite 0s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-image: url("./6pic.jpg");
+  }
+}
+
+/* Sign in */
+
+.form-fill1 {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 280px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  height: 35px;
+}
+
+.form-fill {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 280px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  height: 35px;
+}
+
+.form-btnn {
+  border-radius: 15px;
+  font-size: 20px;
+  margin-top: 24px;
+  height: 45px;
+  width: 160px;
+  margin-left: 30px;
+  background-color: whitesmoke;
+}
+
+.form-btnn:hover {
+  background-color: silver;
+  color: #242424;
+  border-radius: 0;
+}
+
+@media screen and (max-width: 960px) {
+  .form-fill1 {
+    margin-top: 8px;
+    margin-left: 6px;
+    width: 180px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .form-fill {
+    margin-top: 5px;
+    margin-left: 6px;
+    width: 180px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .form-btnn {
+    border-radius: 15px;
+    font-size: 16px;
+    margin-top: 24px;
+    height: 30px;
+    width: 100px;
+    margin-left: 30px;
+    background-color: whitesmoke;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .form-btnn: hover {
+    background-color: salmon;
+    color: #242424;
+    border-radius: 0;
+  }
 }
