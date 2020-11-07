@@ -29,7 +29,7 @@ const Signup = ({ history }) => {
     const onSubmitHandler = useCallback(
         async event => {
             event.preventDefault();
-            // User object creation
+            // form data sheme
             const {
                 fName,
                 mName,
@@ -186,7 +186,7 @@ const Signup = ({ history }) => {
               </div>
 
               <div className="form-fill">
-                <label htmlFor="password2" className="form-label">
+                <label htmlFor="re_password" className="form-label">
                   <input
                     id="re_password"
                     type="password"
@@ -210,7 +210,7 @@ const Signup = ({ history }) => {
               </div>
 
               <div className="form-fill">
-                <label htmlFor="state" className="form-label">
+                <label htmlFor="stateName" className="form-label">
                   <input
                     id="stateName"
                     type="text"
@@ -225,7 +225,7 @@ const Signup = ({ history }) => {
                 <label htmlFor="zipcode" className="form-label">
                   <input
                     id="zipcode"
-                    type="text"
+                    type="number"
                     name="zipcode"
                     className="form-fill"
                     placeholder="Zipcode*"

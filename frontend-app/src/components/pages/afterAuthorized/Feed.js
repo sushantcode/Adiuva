@@ -7,7 +7,6 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import placeholderImg from "../8.jpg";
 import app from '../../utils/fireApp';
 
 
@@ -39,7 +38,7 @@ class Feed extends Component {
                     <Typography gutterBottom variant="h5" component="h2">
                         {dPost.userName}
                     </Typography>
-                    <Typography variant="body2" color="textSecondary">{new Date(dPost.createdAt._seconds*1000).toLocaleDateString("en-US")}</Typography>
+                    <Typography variant="body2" color="textSecondary">{dPost.createdAt}</Typography>
                     <Typography variant="body1"><b>Post-Type: {dPost.postType}</b></Typography>
                     <Typography variant="body1">Zipcode: {dPost.zipcode}</Typography>
                     <Typography variant="body1">{dPost.body}</Typography>
