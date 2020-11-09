@@ -16,7 +16,8 @@ const DeletedPage= ({ history }) => {
         <div className="contact-card">
             <div className="content-box">
                 <div className="content">
-                <h1>Your Account has been Successfully deleted.</h1>
+                <h2>Your Account has been Successfully deleted. We are sorry to see you going. 
+                    You are always welcome to signup back again if you change your mind.</h2>
                 <div className="content-mild">
                     <form onSubmit={onSubmitHandler} className=" form-cardbox">
                     <button className="form-btn" type="submit">

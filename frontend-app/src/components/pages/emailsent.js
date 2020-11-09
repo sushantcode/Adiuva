@@ -16,7 +16,8 @@ const EmailSent= ({ history }) => {
         <div className="contact-card">
             <div className="content-box">
                 <div className="content">
-                <h1>If an account is found, an email will be sent to the email address provided, please wait a few minutes, Thank you.</h1>
+                <h2>An email with password reset link has been to the email address provided, if it exists. 
+                    Please check your email and reset your password. Then, come back to login again. Thank you.</h2>
                 <div className="content-mild">
                     <form onSubmit={onSubmitHandler} className=" form-cardbox">
                     <button className="form-btn" type="submit">
