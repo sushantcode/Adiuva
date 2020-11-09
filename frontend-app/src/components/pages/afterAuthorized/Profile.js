@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import Navbar from "../../MainNavbar";
 import StarR from "./StarR";
 import "../Page.css";
@@ -11,6 +11,25 @@ const Profile = ({ history }) => {
         history.push("/login");
     };
     
+  
+  const onSubmitHandler = useCallback(
+      async event => {
+          event.preventDefault();
+          //const {email} = event.target.elements;
+          
+          try {
+
+              
+
+              history.push("/deleteuser");
+          } 
+          catch (err) {
+              alert(err);
+          }
+
+          
+      }
+  ); 
     return (
     <><Navbar />
         <div className="contact-card">
@@ -36,7 +55,14 @@ const Profile = ({ history }) => {
           <button className="form-btnna" type="submit">
                 Edit Profile
               </button>
+              
+              <form onSubmit={onSubmitHandler} className=" form-cardbox">
+              <button className="form-btnna" type="submit">
+                DELETE Profile
+              </button>
+              </form>
           </div>
+      
           
         </form>
         </div>

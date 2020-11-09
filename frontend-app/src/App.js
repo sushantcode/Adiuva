@@ -16,6 +16,9 @@ import Profile from "./components/pages/afterAuthorized/Profile";
 import Appointment from "./components/pages/afterAuthorized/Appointment";
 import Chat from "./components/pages/afterAuthorized/Chat/Chat";
 import CreatePost from "./components/pages/afterAuthorized/CreatePost";
+import EmailSent from "./components/pages/emailsent";
+import DeleteUser from "./components/pages/afterAuthorized/DeleteUser";
+import DeletedPage from "./components/pages/afterAuthorized/accountdeleted";
 
 // Using router and switch to route the pages from one to another
 function App() {
@@ -35,6 +38,9 @@ function App() {
             <Route path="/chat" component={Chat} />
             <Route path="/createpost" component={CreatePost} />
             <Route path="/appointment" component={Appointment} />
+            <Route path="/emailsent" component={EmailSent}/>
+            <Route path="/deleteuser" component={DeleteUser}/>
+            <Route path="/pagedeleted" component={DeletedPage}/>
         </Switch>
         <Footer />
     </Router>
