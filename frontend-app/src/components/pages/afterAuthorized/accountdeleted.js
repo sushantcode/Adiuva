@@ -1,13 +1,13 @@
-import WelcomeNavbar from '../WelcomeNavbar';
-import "./Page.css";
+import WelcomeNavbar from '../../WelcomeNavbar';
+import "../Page.css";
 import React, { useCallback } from "react";
 
-const EmailSent= ({ history }) => {
+const DeletedPage= ({ history }) => {
 
     const onSubmitHandler = useCallback(
         async event => {
             event.preventDefault();
-            history.push("/login");
+            history.push("/signup");
         },
     );
 
@@ -16,11 +16,11 @@ const EmailSent= ({ history }) => {
         <div className="contact-card">
             <div className="content-box">
                 <div className="content">
-                <h1>If an account is found, an email will be sent to the email address provided, please wait a few minutes, Thank you.</h1>
+                <h1>Your Account has been Successfully deleted.</h1>
                 <div className="content-mild">
                     <form onSubmit={onSubmitHandler} className=" form-cardbox">
                     <button className="form-btn" type="submit">
-                        Login
+                        SignUp
                     </button>
                     </form>
                 </div>
@@ -33,4 +33,4 @@ const EmailSent= ({ history }) => {
     
 }
 
-export default EmailSent;
+export default DeletedPage;

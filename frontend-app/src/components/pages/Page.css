@@ -377,3 +377,20 @@
     border-radius: 0;
   }
 }
+
+.form-btnDA {
+  border-radius: 30px;
+  font-size: 25px;
+  margin-top: 50px;
+  height: 100px;
+  width: 200px;
+  margin-left: 30px;
+  background-color: rgb(255, 0, 0);
+}
+
+.form-btnDA:hover {
+  background-color: rgb(255, 75, 75);
+  color: #242424;
+  border-radius: 10;
+}
+
