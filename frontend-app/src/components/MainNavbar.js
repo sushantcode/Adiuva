@@ -102,11 +102,11 @@ function Navbar() {
                 <Link to="/"
                 className="nav-links-mobile"
                 onClick={closeMobileViewMenu & onClickLogout} >
-                Log-Out
+                LogOut
                 </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle="btn--outline" onClick={ onClickLogout }> Log-Out </Button>}
+          {button && <Button buttonStyle="btn--outline" onClick={ onClickLogout }> LogOut </Button>}
         </div>
       </nav>
     </>
