@@ -8,6 +8,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import app from '../../utils/fireApp';
+import Link from 'react-router-dom/Link';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
 
 
 class Feed extends Component {
@@ -25,6 +28,7 @@ class Feed extends Component {
             .catch(err => console.log(err));
     }
     render () {
+        dayjs.extend(relativeTime);
         const { history } = this.props;
         if (!(app.auth().currentUser)) {
             // Redirecting the user to log-in if logged out
@@ -35,10 +39,10 @@ class Feed extends Component {
         this.state.dPosts.map((dPost) => 
             <Card className="card">
                 <CardContent className="content">
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom variant="h5" component={Link} to='/users'>
                         {dPost.userName}
                     </Typography>
-                    <Typography variant="body2" color="textSecondary">{dPost.createdAt}</Typography>
+                    <Typography variant="body2" color="textSecondary">{dayjs(dPost.createdAt).fromNow()}</Typography>
                     <Typography variant="body1"><b>Post-Type: {dPost.postType}</b></Typography>
                     <Typography variant="body1">Zipcode: {dPost.zipcode}</Typography>
                     <Typography variant="body1">{dPost.body}</Typography>

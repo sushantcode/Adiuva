@@ -42,7 +42,11 @@ h1
 {
     height: 200px;
     width: 400px;
-    border-radius: 20px;
+    border-radius: 10px;
+}
+
+textarea {
+    font-size: 20px;
 }
 
 button

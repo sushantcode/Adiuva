@@ -1,3 +1,4 @@
+// importing all the required packages and components
 import React, { useCallback } from "react";
 import WelcomeNavbar from '../WelcomeNavbar';
 import app from '../utils/fireApp';
@@ -17,9 +18,11 @@ const ForgotPass = ({ history }) => {
             const {email} = event.target.elements;
             // Using firebase auth to login and catching error at same time 
             try {
+                // sending reset email to the email provided
                 await app
                 .auth()
                 .sendPasswordResetEmail(email.value)
+                // redirecting to the email sent confirmation page
                 history.push("/emailsent");
             } catch (err) {
                 alert(err);

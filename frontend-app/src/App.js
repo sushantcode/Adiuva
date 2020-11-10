@@ -19,6 +19,7 @@ import CreatePost from "./components/pages/afterAuthorized/CreatePost";
 import EmailSent from "./components/pages/emailsent";
 import DeleteUser from "./components/pages/afterAuthorized/DeleteUser";
 import DeletedPage from "./components/pages/afterAuthorized/accountdeleted";
+import Users from "./components/pages/afterAuthorized/users";
 
 // Using router and switch to route the pages from one to another
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <Route path="/emailsent" component={EmailSent}/>
             <Route path="/deleteuser" component={DeleteUser}/>
             <Route path="/pagedeleted" component={DeletedPage}/>
+            <Route path="/users" component={Users}/>
         </Switch>
         <Footer />
     </Router>

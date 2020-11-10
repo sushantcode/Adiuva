@@ -1,3 +1,4 @@
+// importing all the required packages and components
 import React, { useCallback, useState } from "react";
 import Navbar from "../../MainNavbar";
 import "./CreatePost.css";
@@ -10,28 +11,28 @@ const CreatePost = ({ history }) => {
         // Redirecting the user to log-in if logged out
         history.push("/login");
     };
-
+    // useState to define and set value to image file
     const [img, setImg] = useState(null);
-    let imgUrl = '';
+    // useState to define and set value to postType variable
     const [postType, setPostType] = useState('');
-
+    // checking it any file has been selected
     const fileHandler = data => {
         if(data.target.files[0]) {
             setImg(data.target.files[0]);
         }
     };
-
+    // function to control the actions when the post is submitted to be posted
     const onSubmitHandler = useCallback(
         async event => {
             event.preventDefault();
-
+            // getting body and zipcode from the elements of the html tags
             const {
                 body,
                 zipCode
             } = event.target.elements;
 
             let errors = '';
-
+            // validating all the input fields
             if (postType === '') {
                 errors = 'Post-type must be selected.';
             }
@@ -45,6 +46,7 @@ const CreatePost = ({ history }) => {
             }
             else {
                 try {
+                    // uploading image to the firebase storage
                     const uploadToFirebase = storage.ref(`postImages/${img.name}`).put(img);
                     uploadToFirebase.on(
                         "state_changed",
@@ -53,6 +55,7 @@ const CreatePost = ({ history }) => {
                             alert(error);
                         },
                         () => {
+                            // geting url of the image
                             storage
                                 .ref("postImages")
                                 .child(img.name)
@@ -61,7 +64,9 @@ const CreatePost = ({ history }) => {
                                     const userID = app.auth().currentUser.uid;
                                     db.collection("users").doc(userID).get()
                                     .then((doc) => {
+                                        // getting user full name
                                         const userName = doc.data().fName + ' ' + doc.data().lName;
+                                        // new post object to push to database
                                         const newPost = {
                                             body: body.value,
                                             createdAt: new Date().toISOString(),
@@ -124,9 +129,9 @@ const CreatePost = ({ history }) => {
 
             <div className="description-input">
               <label htmlFor="body" className="form-label">
-                <input
+                <textarea
                   id="body"
-                  type="body"
+                  autoFocus="autofocus"
                   className="body"
                   placeholder="Please Describe what you are posting about........"
                   />
