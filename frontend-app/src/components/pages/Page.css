@@ -29,7 +29,7 @@
 
 .content-mild {
   width: 340px;
-  height: 450px;
+  height: 500px;
   margin-top: 20px;
   display: flex;
   box-shadow: 0px 10px 50px #555;
@@ -54,8 +54,6 @@
   height: 50px;
 }
 
-.form-cardbox
-
 .form-inp {
   margin-top: 20px;
   margin-left: 10px;
@@ -79,7 +77,7 @@
 .form-btn {
   border-radius: 30px;
   font-size: 25px;
-  margin-top: 40px;
+  margin-top: 20px;
   height: 60px;
   width: 150px;
   margin-left: 30px;
@@ -97,20 +95,17 @@
 }
 
 .form-btn:hover {
-  background-color: silver;
+  background-color: rgb(197, 138, 138);
   color: #242424;
   border-radius: 10;
 }
 
-.forgot-link {
-  margin-top: 120px;
-  text-align: center;
-  margin-left: 30px;
-}
-
-.forgot-link1 {
-   color: rgb(27, 21, 21);
-   text-decoration: none;
+.thirdlinks-login {
+    color: rgb(2, 3, 2);
+    margin-top: 120px;
+    text-align: center;
+    margin-left: 30px;
+    text-decoration: none;
 }
 
 .app{
@@ -224,7 +219,7 @@
   .form-btn {
     border-radius: 30px;
     font-size: 25px;
-    margin-top: 30px;
+    margin-top: 20px;
     height: 40px;
     width: 130px;
     margin-left: 30px;
@@ -234,9 +229,9 @@
 
 @media screen and (max-width: 960px) {
   .form-btn:hover {
-    background-color: salmon;
+    background-color: rgb(197, 138, 138);
     color: #242424;
-    border-radius: 0;
+    border-radius: 10;
   }
 }
 
@@ -255,24 +250,6 @@
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   background-image: url("./1pic.jpg");
 }
-
-/* @keyframes alik {
-  20% {
-    background-image: url("./2pic.jpg");
-  }
-  40% {
-    background-image: url("./yy.jpg");
-  }
-  60% {
-    background-image: url("./xx.jpg");
-  }
-  80% {
-    background-image: url("./8.jpg");
-  }
-  100% {
-    background-image: url("./10pic.jpg");
-  }
-} */
 
 @media screen and (max-width: 960px) {
   .main-container {

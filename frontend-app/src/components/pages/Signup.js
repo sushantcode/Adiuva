@@ -20,6 +20,8 @@ const Signup = ({ history }) => {
     
     const [open, setOpen] = useState(false);
 
+    const [error, setError] = useState("");
+
     const handleClose = () => {
         setOpen(false);
         history.push("/login");
@@ -42,47 +44,43 @@ const Signup = ({ history }) => {
                 zipcode
             } = event.target.elements;
             
-            let errors = '';
             // regular expression for emails
             const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             
             // Validating all the use inputs and storeing respective error
 
             if (fName.value.trim() === '') {
-                errors = 'First Name cannot be blank';
+                setError("First Name cannot be blank");
             }
 
             else if (lName.value.trim() === '') {
-                errors = 'Last Name cannot be blank';
+                setError("Last Name cannot be blank");
             }
 
             else if (email.value.trim() === '') {
-                errors = 'Email cannot be blank';
+                setError("Email cannot be blank");
             }
 
             else if (!(email.value.match(emailRegEx))) {
-                    errors = 'Invalid email';
+                setError("Invalid email");
             }
 
             else if (password.value.trim() === '') {
-                errors = 'Password cannot be blank';
+                setError("Password cannot be blank");
             }
 
             else if (password.value !== re_password.value) {
-                errors = 'Passwords must match';
+                setError("Passwords must match");
             }
 
             else if (stateName.value.trim() === '') {
-                errors = 'State cannot be blank';
+                setError("State cannot be blank");
             }
 
             else if (zipcode.value.trim() === '') {
-                errors = 'Zipcode cannot be blank';
+                setError("Zipcode cannot be blank");
             }
 
-            if (errors !== '') {
-                alert(errors);
-            }
             else {
                 try {
                     let newUserID;
@@ -111,7 +109,7 @@ const Signup = ({ history }) => {
                     // Pushing the user information once user is signed up successfully to database
                     db.doc(`/users/${newUser.userID}`).set(newUser);
                 } catch (err) {
-                    alert (err);
+                    setError(err.message);
                 }
             }
         }
@@ -188,7 +186,7 @@ const Signup = ({ history }) => {
                     className="form-fill"
                     placeholder="Zipcode*"
                   />
-
+            <h4 style={{color: "red"}}> {error} </h4>
               <button className="form-btn" type="submit">
                 Sign Up
               </button>
