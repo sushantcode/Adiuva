@@ -16,15 +16,12 @@ const Survey = ({ history }) => {
         <><WelcomeNavbar />
         <div className="contact-card">
         <div className="content-box">
-            <div className="content">
             <h1> Survey</h1>
             <p>We value your feedback</p>
             <div className="content-mild"> 
                 <form className=" form-cardbox">
-                <StarRating /> 
-                    <div className="message">
                         <div className="form-in">
-                            <label htmlFor="message" className="form-label">
+                        <StarRating /> 
                             <input
                                 id="message"
                                 type="paragraph"
@@ -32,14 +29,11 @@ const Survey = ({ history }) => {
                                 className="form-in"
                                 placeholder="Message"
                             />
-                            </label>
-                        </div>
-                    </div>
                 <button className="form-btn" type="submit">
                     Submit
                 </button>
+                </div>
                 </form>
-            </div>
             </div>
         </div>
     </div>

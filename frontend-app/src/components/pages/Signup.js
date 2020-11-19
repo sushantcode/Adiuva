@@ -121,12 +121,10 @@ const Signup = ({ history }) => {
     <><WelcomeNavbar />
     <div className="contact-card">
       <div className="content-box">
-        <div className="content">
           <h1> Please Sign Up </h1>
           <div className="content-mild">
             <form className=" form-cardbox" onSubmit={onSubmitHandler}>
               <div className="form-fill1">
-                <label htmlFor="fNmae" className="form-label">
                   <input
                     id="fName"
                     type="text"
@@ -134,11 +132,6 @@ const Signup = ({ history }) => {
                     className="form-fill"
                     placeholder="First Name*"
                   />
-                </label>
-              </div>
-
-              <div className="form-fill">
-                <label htmlFor="mName" className="form-label">
                   <input
                     id="MName"
                     type="text"
@@ -146,11 +139,6 @@ const Signup = ({ history }) => {
                     className="form-fill"
                     placeholder="Middle Name"
                   />
-                </label>
-              </div>
-
-              <div className="form-fill">
-                <label htmlFor="lName" className="form-label">
                   <input
                     id="lName"
                     type="text"
@@ -158,11 +146,6 @@ const Signup = ({ history }) => {
                     className="form-fill"
                     placeholder="Last Name*"
                   />
-                </label>
-              </div>
-
-              <div className="form-fill">
-                <label htmlFor="email" className="form-label">
                   <input
                     id="email"
                     type="text"
@@ -170,11 +153,6 @@ const Signup = ({ history }) => {
                     className="form-fill"
                     placeholder="Email*"
                   />
-                </label>
-              </div>
-
-              <div className="form-fill">
-                <label htmlFor="password" className="form-label">
                   <input
                     id="password"
                     type="password"
@@ -182,11 +160,6 @@ const Signup = ({ history }) => {
                     className="form-fill"
                     placeholder="Password*"
                   />
-                </label>
-              </div>
-
-              <div className="form-fill">
-                <label htmlFor="re_password" className="form-label">
                   <input
                     id="re_password"
                     type="password"
@@ -194,11 +167,6 @@ const Signup = ({ history }) => {
                     className="form-fill"
                     placeholder="Confirm Password*"
                   />
-                </label>
-              </div>
-
-              <div className="form-fill">
-                <label htmlFor="city" className="form-label">
                   <input
                     id="city"
                     type="text"
@@ -206,11 +174,6 @@ const Signup = ({ history }) => {
                     className="form-fill"
                     placeholder="City"
                   />
-                </label>
-              </div>
-
-              <div className="form-fill">
-                <label htmlFor="stateName" className="form-label">
                   <input
                     id="stateName"
                     type="text"
@@ -218,11 +181,6 @@ const Signup = ({ history }) => {
                     className="form-fill"
                     placeholder="State*"
                   />
-                </label>
-              </div>
-
-              <div className="form-fill">
-                <label htmlFor="zipcode" className="form-label">
                   <input
                     id="zipcode"
                     type="number"
@@ -230,10 +188,8 @@ const Signup = ({ history }) => {
                     className="form-fill"
                     placeholder="Zipcode*"
                   />
-                </label>
-              </div>
 
-              <button className="form-btnn" type="submit">
+              <button className="form-btn" type="submit">
                 Sign Up
               </button>
                 <Dialog
@@ -253,8 +209,8 @@ const Signup = ({ history }) => {
                     </Button>
                     </DialogActions>
                 </Dialog>
+            </div>
             </form>
-          </div>
         </div>
       </div>
     </div></>

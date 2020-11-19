@@ -233,7 +233,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .form-btn: hover {
+  .form-btn:hover {
     background-color: salmon;
     color: #242424;
     border-radius: 0;
@@ -371,7 +371,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .form-btnn: hover {
+  .form-btnn:hover {
     background-color: salmon;
     color: #242424;
     border-radius: 0;

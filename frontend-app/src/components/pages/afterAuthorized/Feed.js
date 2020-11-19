@@ -2,15 +2,14 @@ import React, { Component } from "react";
 import { withRouter } from 'react-router';
 import Navbar from "../../MainNavbar";
 import Grid from '@material-ui/core/Grid';
-import axios from 'axios';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import app from '../../utils/fireApp';
 import Link from 'react-router-dom/Link';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
+import app, { db } from '../../utils/fireApp';
 
 
 class Feed extends Component {
@@ -19,14 +18,30 @@ class Feed extends Component {
         dPosts: null
     };
     componentDidMount(){
-        axios.get('/dPosts')
-            .then((res) => {
-                this.setState({
-                    dPosts: res.data
-                })
-            })
-            .catch(err => console.log(err));
-    }
+        db
+        .collection("dPosts")
+        .get()
+        .then((data) => {
+            let posts = [];
+            //pushing each and every posts after retrieving from firebase database to posts[]
+            data.forEach((doc) => {
+                posts.push({
+                    postID: doc.id,
+                    userName: doc.data().userName,
+                    postType: doc.data().postType,
+                    body: doc.data().body,
+                    zipcode: doc.data().zipcode,
+                    imgURL: doc.data().imgURL,
+                    createdAt: doc.data().createdAt,
+                });
+            });
+            this.setState({
+                dPosts: posts
+            });
+        })
+        .catch((err) => alert(err));
+    };
+
     render () {
         dayjs.extend(relativeTime);
         const { history } = this.props;

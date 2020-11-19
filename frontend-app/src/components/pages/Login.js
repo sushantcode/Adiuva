@@ -42,12 +42,10 @@ const Login = ({ history }) => {
             <><WelcomeNavbar />
             <div className="contact-card">
             <div className="content-box">
-                <div className="content">
                 <h1> Please Log In </h1>
                 <div className="content-mild">
                     <form onSubmit={onSubmitHandler} className=" form-cardbox">
                     <div className="form-input">
-                        <label htmlFor="username" className="form-label">
                         <input
                             id="email"
                             type="text"
@@ -55,19 +53,13 @@ const Login = ({ history }) => {
                             className="form-input"
                             placeholder="Email"
                         />
-                        </label>
-                    </div>
-                    
-                    <div className="form-inp">
-                        <label htmlFor="password" className="form-label">
                         <input
                             id="password"
                             type="password"
                             name="password"
-                            className="form-inp"
+                            className="form-input"
                             placeholder="Password"
                         />
-                        </label>
                     </div>
 
                     <div className="forgot-link">
@@ -87,7 +79,6 @@ const Login = ({ history }) => {
                     </form>
                 </div>
                 </div>
-            </div>
             </div>
             </>
         );

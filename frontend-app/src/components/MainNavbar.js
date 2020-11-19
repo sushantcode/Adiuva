@@ -99,9 +99,9 @@ function Navbar() {
             </li>
 
             <li>
-                <Link to="/"
+                <Link to="/login"
                 className="nav-links-mobile"
-                onClick={closeMobileViewMenu & onClickLogout} >
+                onClick={ onClickLogout } >
                 LogOut
                 </Link>
             </li>
