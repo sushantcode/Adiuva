@@ -1,6 +1,10 @@
+.post-container {
+    min-height: 76vh;
+}
 .card
 {
     display: 'flex';
+    flex-direction: column;
     margin-bottom: 20;
     align-content: center;
     justify-items: center;
@@ -11,7 +15,6 @@
     min-width: 200;
 }
 
-.content
-{
-    padding: 20;
+.selectPostType {
+    font-size: medium;
 }
