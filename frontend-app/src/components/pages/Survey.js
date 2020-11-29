@@ -83,7 +83,7 @@ const Survey = ({ history }) => {
                                 })}
                             </div>
 
-                            <input
+                            <textarea
                                 id="message"
                                 type="paragraph"
                                 name="message"

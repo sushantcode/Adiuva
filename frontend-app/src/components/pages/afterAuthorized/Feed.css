@@ -1,20 +1,35 @@
 .post-container {
     min-height: 76vh;
 }
+
 .card
 {
     display: 'flex';
-    flex-direction: column;
+    position: relative;
     margin-bottom: 20;
-    align-content: center;
-    justify-items: center;
 }
 
 .img
 {
     min-width: 200;
+    object-fit: cover;
 }
 
 .selectPostType {
     font-size: medium;
+}
+
+.card-content {
+    flex-direction: column;
+    object-fit: cover;
+    margin-right: 0;
+}
+
+.authorDetail {
+    text-align: center;
+}
+
+.userImg {
+    max-width: 200;
+    max-height: 200;
 }

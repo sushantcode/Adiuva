@@ -1,16 +1,21 @@
 import React from "react";
 import WelcomeNavbar from '../WelcomeNavbar';
-// import BackgroundSlideShow from "react-background";
+import app from '../utils/fireApp';
 
-function Home() {
+// Function to process home screen
+const Home = ({ history }) => {
+    // Check if the user is already logged in
+    if (app.auth().currentUser && app.auth().currentUser.emailVerified) {
+        // Redirecting the user already logged in
+        history.push("/feed");
+    };
+
   return (
     <><WelcomeNavbar />
-    <div className="contact-card">
         <div className="content-box">
                     <h1><p> Welcome to the world of Adiuva!!! </p></h1>
-                    <h3><p> Please, place your good heart at work! </p></h3>
+                    <h3><p> where, you place your good heart at work! </p></h3>
             </div>
-      </div>
     </>
   );
 }

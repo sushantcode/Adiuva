@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { withRouter } from 'react-router';
 import Navbar from "../../MainNavbar";
 import Grid from '@material-ui/core/Grid';
+import withStyles from '@material-ui/core/styles/withStyles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Link from 'react-router-dom/Link';
 import dayjs from 'dayjs';
@@ -37,6 +38,7 @@ class Feed extends Component {
                     zipcode: doc.data().zipcode,
                     imgURL: doc.data().imgURL,
                     createdAt: doc.data().createdAt,
+                    uid: doc.data().userID,
                 });
             });
             this.setState({
@@ -63,25 +65,33 @@ class Feed extends Component {
            dPost.zipcode === this.state.zipcode
         ).map((dPost) => 
             <Card className="card" justify="center" alignContent="center">
-                <CardContent className="content">
-                    <Typography gutterBottom variant="h5" component={Link} to='/users'>
+                <CardContent className="card-content">
+                <div className="authorDetail">
+                    <Typography gutterBottom variant="h5" component={Link} 
+                    to={{
+                        pathname: "/users",
+                        state: {
+                            uid: dPost.uid}
+                        }}>
                         {dPost.userName}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">{dayjs(dPost.createdAt).fromNow()}</Typography>
                     <Typography variant="body1"><b>Post-Type: {dPost.postType}</b></Typography>
                     <Typography variant="body1">Zipcode: {dPost.zipcode}</Typography>
+                </div>
                     <Typography variant="body1">{dPost.body}</Typography>
                     <CardMedia component="img" image={dPost.imgURL} title="Post Image" className="img" />
                 </CardContent>
             </Card>)
-        ) : <p> Loading... </p>
+        ) : <p> Loading... </p>;
         return (
-            <><Navbar /><div className="post-container">
+            <><Navbar />
+            <div className="post-container">
             <Grid container spacing={10}>
-                <Grid item sm={8} xs={12} justify='center' alignItems='center' alignContent='center'>
+                <Grid item sm={8} xs={12}>
                     {recentDposts}
                 </Grid>
-                <Grid item sm={4} xs={12}>
+                <Grid item sm={4} xs={12} component={Paper}>
                 <h1>Filter Posts: </h1> <br />
                 <h2>By Post-Type</h2>
                 <label className="selectPostType">
@@ -136,6 +146,6 @@ class Feed extends Component {
             </>
         );
     }
-}
+};
 
-export default withRouter(Feed);
+export default Feed;

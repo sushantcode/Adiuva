@@ -82,7 +82,7 @@ const Contact = ({ history }) => {
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                   />
-                    <input
+                    <textarea
                       id="message"
                       type="text"
                       name="message"

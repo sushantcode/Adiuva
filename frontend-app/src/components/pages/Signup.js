@@ -104,6 +104,7 @@ const Signup = ({ history }) => {
                         email: email.value,
                         zipcode: zipcode.value,
                         userID: newUserID,
+                        imgURL: "",
                         registeredAt: new Date().toISOString(),
                     };
                     // Pushing the user information once user is signed up successfully to database
