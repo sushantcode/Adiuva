@@ -15,6 +15,7 @@ import Feed from "./components/pages/afterAuthorized/Feed";
 import Profile from "./components/pages/afterAuthorized/Profile";
 import Appointment from "./components/pages/afterAuthorized/Appointment";
 import Chat from "./components/pages/afterAuthorized/Chat/Chat";
+import ChatP from "./components/pages/afterAuthorized/Chat/ChatP";
 import CreatePost from "./components/pages/afterAuthorized/CreatePost";
 import EmailSent from "./components/pages/emailsent";
 import DeleteUser from "./components/pages/afterAuthorized/DeleteUser";
@@ -25,7 +26,7 @@ import UserProfile from "./components/pages/afterAuthorized/UserProfile";
 function App() {
   return (
     <Router>
-        <Switch>
+        <Switch>      
             <Route exact path="/" component={Home} />
             <Route path="/contactus" component={Contact} />
             <Route path="/login" component={Login} />
@@ -36,7 +37,8 @@ function App() {
             <Route path="/privacy" component={Privacy} />
             <Route path="/feed" component={Feed} />
             <Route path="/profile" component={Profile} />
-            <Route path="/chat" component={Chat} />
+            <Route exact path="/chat" component={ChatP} />
+            <Route exact path="/chat/:userId" component={Chat} />
             <Route path="/createpost" component={CreatePost} />
             <Route path="/appointment" component={Appointment} />
             <Route path="/emailsent" component={EmailSent}/>

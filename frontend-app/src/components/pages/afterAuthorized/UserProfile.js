@@ -21,7 +21,8 @@ class UserProfile extends Component {
             city: "",
             zipcode: "",
             state: "",
-            //imgURL: doc.data().imgURL,
+            imgURL: "",
+            about: "",
             registeredAt: null
         },
         dPosts: null,
@@ -44,7 +45,10 @@ class UserProfile extends Component {
                     zipcode: doc.data().zipcode,
                     state: doc.data().stateName,
                     imgURL: doc.data().imgURL,
-                    registeredAt: doc.data().registeredAt}
+                    about: doc.data().about,
+                    registeredAt: doc.data().registeredAt
+                },
+                userID: uid
             });
         })
         .catch((err) => alert(err));
@@ -69,14 +73,10 @@ class UserProfile extends Component {
                 });
             });
             this.setState({
-                dPosts: posts
+                dPosts: posts,
             });
         })
         .catch((err) => alert(err));
-
-        this.setState({
-            userID: uid
-        });
     };
     render () {
         dayjs.extend(relativeTime);
@@ -114,8 +114,9 @@ class UserProfile extends Component {
                                 <div class="media-body mb-5 text-white">
                                     <h2 class="mt-0 mb-0">{this.state.user.fName} {this.state.user.lName}</h2>
                                         <h3><i class="fas fa-map-marker-alt mr-2 mb-2"></i> {this.state.user.city}, {this.state.user.state}</h3>
-                                        <CalendarToday color="primary" />{' '}
-                                        <span class="mb-4">Joined {dayjs(this.state.user.registeredAt).format('MMM YYYY')}</span>
+                                        <p class="mb-4">
+                                            <CalendarToday color="primary" />{' '}<b>Joined {dayjs(this.state.user.registeredAt).format('MMM YYYY')}</b>
+                                        </p>
                                 </div>
                             </div>
                         </div>
@@ -123,7 +124,11 @@ class UserProfile extends Component {
                         <div class="bg-light p-4 d-flex justify-content-end text-center">
                             <ul class="list-inline mb-0">
                                 <li class="list-inline-item">
-                                    <Link class="btn-outline-dark btn-block" to={`/chat/${this.state.user.userID}`}><h2><b>Connect</b></h2></Link>
+                                    <Link 
+                                    class="connect-btn btn-outline-dark btn-block" 
+                                    to={`/chat/${this.state.userID}`}>
+                                        <h2><b><i class="far fa-comments"></i> {" "}Message</b></h2>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

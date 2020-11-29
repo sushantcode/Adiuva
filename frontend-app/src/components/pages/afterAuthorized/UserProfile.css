@@ -1,3 +1,7 @@
+.user-container {
+    min-height: 76vh;
+}
+
 .profile-head {
     transform: translateY(5rem)
 }
@@ -175,4 +179,14 @@ button.bg-light:hover{background-color:#dae0e5!important}
 .btn-block{
     display:block;
     width:100%;
+}
+
+.connect-btn {
+    padding: 8px 20px;
+    border-radius: 5px;
+    outline: blue;
+    border: black;
+    cursor: pointer;
+    background-color: rgb(95, 188, 204);
+    text-decoration: none;
 }

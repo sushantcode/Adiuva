@@ -6,9 +6,7 @@ import AttachmentIcon from "@material-ui/icons/Attachment";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { useParams } from "react-router-dom";
 import ScheduleIcon from "@material-ui/icons/Schedule";
-import Time from "./Time";
 import app, { db } from "../../../utils/fireApp";
-import firebase from "firebase";
 //import Popup from "./Popup";
 
 function ChatPage() {
@@ -22,6 +20,7 @@ function ChatPage() {
   const userID = app.auth().currentUser.uid;
   const [openPopup, setOpenPopup] = useState(false);
 
+  console.log(userId);
   useEffect(() => {
     if (userId) {
       db.collection("users")
@@ -34,8 +33,6 @@ function ChatPage() {
         .doc(userID)
         .onSnapshot((snapshot) => setUinfo(snapshot.data()));
 
-
-     
         //fetching all the fields
         
       db.collection("chat-users")

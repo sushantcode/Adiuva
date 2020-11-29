@@ -18,6 +18,7 @@ const Home = ({ history }) => {
             </div>
     </>
   );
+
 }
 
 export default Home;
