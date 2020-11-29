@@ -1,0 +1,14 @@
+.choose{
+  height: 36vh;
+}
+
+
+.button_cl{
+  margin-top: 10vh;
+  height:7vh;
+  width: 7vw;
+  background-color:lightgrey;
+  align-items: center;
+  margin-left: 3vw;
+  border-radius: 10;
+}

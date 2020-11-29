@@ -38,6 +38,7 @@
     position: relative;
     padding: 30px;
     background-color: lightgrey;
+    overflow-y: scroll;
 }
 
 .chat_message{
@@ -91,4 +92,8 @@
     width: 30px;
       
     
+}
+
+.start {
+    text-align: center;
 }

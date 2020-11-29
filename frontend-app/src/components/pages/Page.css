@@ -246,8 +246,8 @@
   background-size: 100%;
   background-repeat: no-repeat;
   backface-visibility: hidden;
-  animation: alik 10s linear infinite 0s;
-  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* animation: alik 10s linear infinite 0s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
   background-image: url("./1pic.jpg");
 }
 
@@ -267,9 +267,9 @@
     display: flex;
     flex-direction: column;
     backface-visibility: hidden;
-    animation: alik 8s linear infinite 0s;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    background-image: url("./6pic.jpg");
+    /* animation: alik 8s linear infinite 0s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+    background-image: url("./1pic.jpg");
   }
 }
 
