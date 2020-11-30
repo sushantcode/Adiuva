@@ -86,13 +86,11 @@ class Feed extends Component {
         return (
             <><Navbar />
             <div className="post-container">
-            <Grid container spacing={10}>
-                <Grid item sm={8} xs={12}>
-                    {recentDposts}
-                </Grid>
-                <Grid item sm={4} xs={12} component={Paper}>
-                <h1>Filter Posts: </h1> <br />
-                <h2>By Post-Type</h2>
+            <Grid container spacing={2} justify="center">
+            <Grid item justify="center">
+                <h2>Filter Posts </h2>
+                <hr /><br />
+                <h3>By Post-Type:</h3><br />
                 <label className="selectPostType">
                     <input 
                     id="post-type"
@@ -102,9 +100,9 @@ class Feed extends Component {
                     checked={this.state.postType === "All"} 
                     onChange={e => {this.setState({postType: e.target.value})}}  
                     />
-                    All
+                    <b>All</b>
                 </label>
-                <br />
+                <br /><br />
                 <label className="selectPostType">
                     <input 
                     id="post-type"
@@ -114,9 +112,9 @@ class Feed extends Component {
                     checked={this.state.postType === "Donation Request"} 
                     onChange={e => {this.setState({postType: e.target.value})}}  
                     />
-                     Donation Request
+                     <b>Donation Request</b>
                 </label>
-                <br />
+                <br /><br />
                 <label className="selectPostType">
                     <input 
                     id="post-type"
@@ -126,10 +124,9 @@ class Feed extends Component {
                     checked={this.state.postType === "Donation Offered"} 
                     onChange={e => {this.setState({postType: e.target.value})}}  
                     />
-                     Donation Offered
-                </label>
-                <br /> <br />
-                <h2>By Zipcode:</h2>
+                     <b>Donation Offered</b>
+                </label><br /><br /><hr /><br />
+                <h3>By Zipcode:</h3><br />
                 <label className="selectPostType">
                     <input 
                     id="input"
@@ -139,6 +136,9 @@ class Feed extends Component {
                     onChange={e => {this.setState({zipcode: e.target.value})}}  
                     />
                 </label>
+                </Grid>
+                <Grid item sm={8} xs={12}>
+                    {recentDposts}
                 </Grid>
             </Grid>
             </div>

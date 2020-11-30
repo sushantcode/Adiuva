@@ -1,6 +1,7 @@
 import React from "react";
 import WelcomeNavbar from '../WelcomeNavbar';
 import app from '../utils/fireApp';
+import { Link } from "react-router-dom";
 
 // Function to process home screen
 const Home = ({ history }) => {
@@ -13,9 +14,23 @@ const Home = ({ history }) => {
   return (
     <><WelcomeNavbar />
         <div className="content-box">
-                    <h1><p> Welcome to the world of Adiuva!!! </p></h1>
-                    <h3><p> where, you place your good heart at work! </p></h3>
-            </div>
+            <p className="welcome-note">
+                <h1> Welcome to Adiuva!!!
+                    <br />where, you place your good heart at work!</h1>
+                <h2>Please {" "}
+                <Link
+                    to="/signup"
+                    >
+                        Sign-Up
+                </Link> if you are not already a member!</h2>
+                <h3>Already a Member? Please {" "}
+                <Link
+                    to="/login"
+                    >
+                        Log In
+                </Link></h3>
+            </p>
+        </div>
     </>
   );
 

@@ -1,12 +1,9 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import Welcome from "./Welcome";
-import ChatPage from "./ChatPage";
 import MainNavbar from "../../../MainNavbar";
 import "./Chat.css";
 import app from "../../../utils/fireApp";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import app, {db} from '../../../utils/fireApp';
 
 const ChatP = ({ history }) => {
   // Check if the user is logged in

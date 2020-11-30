@@ -1,11 +1,9 @@
 import React from "react";
 import Sidebar from "./Sidebar";
 import ChatPage from "./ChatPage";
-import ChatP from "./ChatP";
 import MainNavbar from "../../../MainNavbar";
 import "./Chat.css";
 import app from "../../../utils/fireApp";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const Chat = ({ history }) => {
   // Check if the user is logged in
@@ -17,7 +15,6 @@ const Chat = ({ history }) => {
   return (
     <div className="chat">
       <MainNavbar />
-
       <div className="chatcard">
         <div className="chatbox">
           <Sidebar />

@@ -13,6 +13,13 @@
   flex-direction: column;
 }
 
+.welcome-note {
+    color: rgb(71, 45, 11);
+    text-align: center;
+    text-decoration: none;
+    font-family: cursive;
+}
+
 .content {
   margin-top: 14px;
   margin-right: 60px;

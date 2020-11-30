@@ -11,7 +11,7 @@ import Link from 'react-router-dom/Link';
 import app, { db } from '../../utils/fireApp';
 import './UserProfile.css';
 
-
+// Class to handle the static user profile
 class UserProfile extends Component {
     state = {
         user: {
@@ -29,13 +29,14 @@ class UserProfile extends Component {
         userID: ""
     }
     componentDidMount(){
+        // geting user id from the link component
       const uid  = this.props.location.state.uid;
+      // fetching user informations from database
       db
         .collection("users")
         .doc(uid)
         .get()
         .then((doc) => {
-            //pushing each and every posts after retrieving from firebase database to posts[]
             this.setState({
                 user:  {    
                     fName: doc.data().fName,

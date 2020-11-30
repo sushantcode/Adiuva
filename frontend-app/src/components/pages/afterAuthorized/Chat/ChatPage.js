@@ -7,8 +7,8 @@ import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 import { useParams } from "react-router-dom";
 import ScheduleIcon from "@material-ui/icons/Schedule";
 import app, { db } from "../../../utils/fireApp";
-//import Popup from "./Popup";
 
+// Main chat operation to display and push data to database
 function ChatPage() {
   // to keep track of input the user type
   const [input, setInput] = useState("");
@@ -20,8 +20,8 @@ function ChatPage() {
   const userID = app.auth().currentUser.uid;
   const [openPopup, setOpenPopup] = useState(false);
 
-  console.log(userId);
   useEffect(() => {
+    // If user is found, fetch the full name of the user
     if (userId) {
       db.collection("users")
         .doc(userId)
@@ -33,8 +33,7 @@ function ChatPage() {
         .doc(userID)
         .onSnapshot((snapshot) => setUinfo(snapshot.data()));
 
-        //fetching all the fields
-        
+        //fetching all the chat history fields
       db.collection("chat-users")
         .doc(userId)
         .collection(userID)
@@ -44,6 +43,7 @@ function ChatPage() {
           doc.data()))
         );
 
+        // fectching data from other user side
         db.collection("chat-users")
         .doc(userID)
         .collection(userId)

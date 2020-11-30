@@ -105,13 +105,13 @@ const CreatePost = ({ history }) => {
 
     return (
     <><Navbar />
-    <div className="contact-card">
-    <div className="content-box">
-        <div className="content">
-        <form onSubmit={onSubmitHandler}>
+    <div className="post-container">
+        <div className="post-content">
+        <form onSubmit={onSubmitHandler} className="post-form">
           <h1> Creating New Post </h1>
+          <hr />
             <div className="radio1">
-                <p><h4> *Please select one of the following options: </h4>
+                <p><h3> *Please select one of the following options: </h3>
                 <input type="radio" name="postType" value="Donation Request"
                  checked={postType === "Donation Request"} 
                  onChange={(e) => {setPostType(e.target.value)}} /> <b>Donation Request</b>
@@ -123,12 +123,11 @@ const CreatePost = ({ history }) => {
                 </p>
             </div>
 
-            <div className="zipcode">
+            <div className="post=details">
+            <label htmlFor="zipcode" className="form-label">
                 <input type="number" id="zipCode" className="zipCode" placeholder=" Enter zipcode*" />
-            </div>
-
-            <div className="description-input">
-              <label htmlFor="body" className="form-label">
+            </label><br /><br />
+            <label htmlFor="body" className="form-body">
                 <textarea
                   id="body"
                   autoFocus="autofocus"
@@ -146,7 +145,6 @@ const CreatePost = ({ history }) => {
               </form>
         </div>
       </div>
-    </div>
     </>
   );
 }
