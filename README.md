@@ -23,3 +23,10 @@ A web app to connect the people in need, especially those affected by the natura
 ### How to check running app?
 
 Visit: https://helpme-b7e48.web.app/
+
+Contributors:
+
+Sushant Gupta
+Pranay Shakya 
+Alisha Kunwar
+Joel Soriano
