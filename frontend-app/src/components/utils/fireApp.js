@@ -2,14 +2,14 @@ import * as firebase from 'firebase';
 
 
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyA2mQWzTiRkzq8VxQxbpAxEpnjLePQo4Z8",
-    authDomain: "helpme-b7e48.firebaseapp.com",
-    databaseURL: "https://helpme-b7e48.firebaseio.com",
-    projectId: "helpme-b7e48",
-    storageBucket: "helpme-b7e48.appspot.com",
-    messagingSenderId: "112348268808",
-    appId: "1:112348268808:web:99e8308defcfa614d404bd",
-    measurementId: "G-EN26NVPQ60"
+    apiKey: "PROJECT_API_KEY_REMOVED_FOR_SECURITY_REASON",
+    authDomain: "INFO_REMOVED_FOR_SECURITY_REASON",
+    databaseURL: "hINFO_REMOVED_FOR_SECURITY_REASON",
+    projectId: "INFO_REMOVED_FOR_SECURITY_REASON",
+    storageBucket: "INFO_REMOVED_FOR_SECURITY_REASON",
+    messagingSenderId: "INFO_REMOVED_FOR_SECURITY_REASON",
+    appId: "INFO_REMOVED_FOR_SECURITY_REASON",
+    measurementId: "INFO_REMOVED_FOR_SECURITY_REASON"
  });
 
 export const db = firebase.firestore(app);
